@@ -1,29 +1,1239 @@
 {
-  "version": 1,
+  "version": 2,
   "decks": [
     {
-      "id": "master-leetcode",
-      "name": "Master LeetCode",
-      "description": "Initial sample deck for the LeetCode SRS prototype.",
-      "type": "roadmap",
+      "id": "amazon-top-100",
+      "name": "Amazon Interview \u2014 Top 100",
+      "company": "Amazon",
+      "description": "Company-specific curated interview deck. Ranking preserved from the supplied source list.",
       "version": 1,
-      "problemIds": [
-        1,
-        20,
-        121,
-        242,
-        3
-      ],
-      "dailyNewLimit": 2
+      "sourceCount": 100,
+      "problems": [
+        {
+          "problemId": 1,
+          "rank": 1
+        },
+        {
+          "problemId": 42,
+          "rank": 2
+        },
+        {
+          "problemId": 121,
+          "rank": 3
+        },
+        {
+          "problemId": 3,
+          "rank": 4
+        },
+        {
+          "problemId": 146,
+          "rank": 5
+        },
+        {
+          "problemId": 2,
+          "rank": 6
+        },
+        {
+          "problemId": 200,
+          "rank": 7
+        },
+        {
+          "problemId": 15,
+          "rank": 8
+        },
+        {
+          "problemId": 49,
+          "rank": 9
+        },
+        {
+          "problemId": 4,
+          "rank": 10
+        },
+        {
+          "problemId": 5,
+          "rank": 11
+        },
+        {
+          "problemId": 56,
+          "rank": 12
+        },
+        {
+          "problemId": 207,
+          "rank": 13
+        },
+        {
+          "problemId": 875,
+          "rank": 14
+        },
+        {
+          "problemId": 9,
+          "rank": 15
+        },
+        {
+          "problemId": 994,
+          "rank": 16
+        },
+        {
+          "problemId": 33,
+          "rank": 17
+        },
+        {
+          "problemId": 11,
+          "rank": 18
+        },
+        {
+          "problemId": 23,
+          "rank": 19
+        },
+        {
+          "problemId": 560,
+          "rank": 20
+        },
+        {
+          "problemId": 3413,
+          "rank": 21
+        },
+        {
+          "problemId": 904,
+          "rank": 22
+        },
+        {
+          "problemId": 767,
+          "rank": 23
+        },
+        {
+          "problemId": 128,
+          "rank": 24
+        },
+        {
+          "problemId": 169,
+          "rank": 25
+        },
+        {
+          "problemId": 236,
+          "rank": 26
+        },
+        {
+          "problemId": 17,
+          "rank": 27
+        },
+        {
+          "problemId": 347,
+          "rank": 28
+        },
+        {
+          "problemId": 14,
+          "rank": 29
+        },
+        {
+          "problemId": 53,
+          "rank": 30
+        },
+        {
+          "problemId": 78,
+          "rank": 31
+        },
+        {
+          "problemId": 198,
+          "rank": 32
+        },
+        {
+          "problemId": 138,
+          "rank": 33
+        },
+        {
+          "problemId": 26,
+          "rank": 34
+        },
+        {
+          "problemId": 76,
+          "rank": 35
+        },
+        {
+          "problemId": 20,
+          "rank": 36
+        },
+        {
+          "problemId": 70,
+          "rank": 37
+        },
+        {
+          "problemId": 75,
+          "rank": 38
+        },
+        {
+          "problemId": 239,
+          "rank": 39
+        },
+        {
+          "problemId": 21,
+          "rank": 40
+        },
+        {
+          "problemId": 31,
+          "rank": 41
+        },
+        {
+          "problemId": 18,
+          "rank": 42
+        },
+        {
+          "problemId": 34,
+          "rank": 43
+        },
+        {
+          "problemId": 48,
+          "rank": 44
+        },
+        {
+          "problemId": 424,
+          "rank": 45
+        },
+        {
+          "problemId": 1011,
+          "rank": 46
+        },
+        {
+          "problemId": 1929,
+          "rank": 47
+        },
+        {
+          "problemId": 28,
+          "rank": 48
+        },
+        {
+          "problemId": 55,
+          "rank": 49
+        },
+        {
+          "problemId": 7,
+          "rank": 50
+        },
+        {
+          "problemId": 84,
+          "rank": 51
+        },
+        {
+          "problemId": 88,
+          "rank": 52
+        },
+        {
+          "problemId": 217,
+          "rank": 53
+        },
+        {
+          "problemId": 238,
+          "rank": 54
+        },
+        {
+          "problemId": 735,
+          "rank": 55
+        },
+        {
+          "problemId": 125,
+          "rank": 56
+        },
+        {
+          "problemId": 253,
+          "rank": 57
+        },
+        {
+          "problemId": 22,
+          "rank": 58
+        },
+        {
+          "problemId": 27,
+          "rank": 59
+        },
+        {
+          "problemId": 46,
+          "rank": 60
+        },
+        {
+          "problemId": 62,
+          "rank": 61
+        },
+        {
+          "problemId": 322,
+          "rank": 62
+        },
+        {
+          "problemId": 621,
+          "rank": 63
+        },
+        {
+          "problemId": 16,
+          "rank": 64
+        },
+        {
+          "problemId": 19,
+          "rank": 65
+        },
+        {
+          "problemId": 35,
+          "rank": 66
+        },
+        {
+          "problemId": 234,
+          "rank": 67
+        },
+        {
+          "problemId": 283,
+          "rank": 68
+        },
+        {
+          "problemId": 410,
+          "rank": 69
+        },
+        {
+          "problemId": 127,
+          "rank": 70
+        },
+        {
+          "problemId": 210,
+          "rank": 71
+        },
+        {
+          "problemId": 242,
+          "rank": 72
+        },
+        {
+          "problemId": 295,
+          "rank": 73
+        },
+        {
+          "problemId": 1752,
+          "rank": 74
+        },
+        {
+          "problemId": 3914,
+          "rank": 75
+        },
+        {
+          "problemId": 6,
+          "rank": 76
+        },
+        {
+          "problemId": 41,
+          "rank": 77
+        },
+        {
+          "problemId": 54,
+          "rank": 78
+        },
+        {
+          "problemId": 136,
+          "rank": 79
+        },
+        {
+          "problemId": 167,
+          "rank": 80
+        },
+        {
+          "problemId": 175,
+          "rank": 81
+        },
+        {
+          "problemId": 485,
+          "rank": 82
+        },
+        {
+          "problemId": 496,
+          "rank": 83
+        },
+        {
+          "problemId": 739,
+          "rank": 84
+        },
+        {
+          "problemId": 8,
+          "rank": 85
+        },
+        {
+          "problemId": 79,
+          "rank": 86
+        },
+        {
+          "problemId": 540,
+          "rank": 87
+        },
+        {
+          "problemId": 796,
+          "rank": 88
+        },
+        {
+          "problemId": 977,
+          "rank": 89
+        },
+        {
+          "problemId": 1004,
+          "rank": 90
+        },
+        {
+          "problemId": 67,
+          "rank": 91
+        },
+        {
+          "problemId": 69,
+          "rank": 92
+        },
+        {
+          "problemId": 100,
+          "rank": 93
+        },
+        {
+          "problemId": 124,
+          "rank": 94
+        },
+        {
+          "problemId": 152,
+          "rank": 95
+        },
+        {
+          "problemId": 162,
+          "rank": 96
+        },
+        {
+          "problemId": 199,
+          "rank": 97
+        },
+        {
+          "problemId": 206,
+          "rank": 98
+        },
+        {
+          "problemId": 287,
+          "rank": 99
+        },
+        {
+          "problemId": 349,
+          "rank": 100
+        }
+      ]
     },
     {
-      "id": "two-pointers",
-      "name": "Two Pointers",
-      "description": "Dynamic sample deck based on problem pattern.",
-      "type": "dynamic",
-      "filter": {
-        "pattern": "Two Pointers"
-      }
+      "id": "google-top-100",
+      "name": "Google Interview \u2014 Top 100",
+      "company": "Google",
+      "description": "Company-specific curated interview deck. Ranking preserved from the supplied source list.",
+      "version": 1,
+      "sourceCount": 101,
+      "problems": [
+        {
+          "problemId": 1,
+          "rank": 1
+        },
+        {
+          "problemId": 2,
+          "rank": 2
+        },
+        {
+          "problemId": 9,
+          "rank": 3
+        },
+        {
+          "problemId": 15,
+          "rank": 4
+        },
+        {
+          "problemId": 42,
+          "rank": 5
+        },
+        {
+          "problemId": 3,
+          "rank": 6
+        },
+        {
+          "problemId": 4,
+          "rank": 7
+        },
+        {
+          "problemId": 121,
+          "rank": 8
+        },
+        {
+          "problemId": 1929,
+          "rank": 9
+        },
+        {
+          "problemId": 14,
+          "rank": 10
+        },
+        {
+          "problemId": 128,
+          "rank": 11
+        },
+        {
+          "problemId": 5,
+          "rank": 12
+        },
+        {
+          "problemId": 7,
+          "rank": 13
+        },
+        {
+          "problemId": 11,
+          "rank": 14
+        },
+        {
+          "problemId": 169,
+          "rank": 15
+        },
+        {
+          "problemId": 26,
+          "rank": 16
+        },
+        {
+          "problemId": 20,
+          "rank": 17
+        },
+        {
+          "problemId": 175,
+          "rank": 18
+        },
+        {
+          "problemId": 88,
+          "rank": 19
+        },
+        {
+          "problemId": 560,
+          "rank": 20
+        },
+        {
+          "problemId": 13,
+          "rank": 21
+        },
+        {
+          "problemId": 53,
+          "rank": 22
+        },
+        {
+          "problemId": 200,
+          "rank": 23
+        },
+        {
+          "problemId": 21,
+          "rank": 24
+        },
+        {
+          "problemId": 242,
+          "rank": 25
+        },
+        {
+          "problemId": 56,
+          "rank": 26
+        },
+        {
+          "problemId": 206,
+          "rank": 27
+        },
+        {
+          "problemId": 347,
+          "rank": 28
+        },
+        {
+          "problemId": 875,
+          "rank": 29
+        },
+        {
+          "problemId": 18,
+          "rank": 30
+        },
+        {
+          "problemId": 48,
+          "rank": 31
+        },
+        {
+          "problemId": 49,
+          "rank": 32
+        },
+        {
+          "problemId": 33,
+          "rank": 33
+        },
+        {
+          "problemId": 146,
+          "rank": 34
+        },
+        {
+          "problemId": 22,
+          "rank": 35
+        },
+        {
+          "problemId": 54,
+          "rank": 36
+        },
+        {
+          "problemId": 1757,
+          "rank": 37
+        },
+        {
+          "problemId": 69,
+          "rank": 38
+        },
+        {
+          "problemId": 1768,
+          "rank": 39
+        },
+        {
+          "problemId": 2667,
+          "rank": 40
+        },
+        {
+          "problemId": 189,
+          "rank": 41
+        },
+        {
+          "problemId": 198,
+          "rank": 42
+        },
+        {
+          "problemId": 55,
+          "rank": 43
+        },
+        {
+          "problemId": 70,
+          "rank": 44
+        },
+        {
+          "problemId": 283,
+          "rank": 45
+        },
+        {
+          "problemId": 410,
+          "rank": 46
+        },
+        {
+          "problemId": 17,
+          "rank": 47
+        },
+        {
+          "problemId": 51,
+          "rank": 48
+        },
+        {
+          "problemId": 167,
+          "rank": 49
+        },
+        {
+          "problemId": 202,
+          "rank": 50
+        },
+        {
+          "problemId": 217,
+          "rank": 51
+        },
+        {
+          "problemId": 231,
+          "rank": 52
+        },
+        {
+          "problemId": 349,
+          "rank": 53
+        },
+        {
+          "problemId": 16,
+          "rank": 54
+        },
+        {
+          "problemId": 35,
+          "rank": 55
+        },
+        {
+          "problemId": 50,
+          "rank": 56
+        },
+        {
+          "problemId": 485,
+          "rank": 57
+        },
+        {
+          "problemId": 8,
+          "rank": 58
+        },
+        {
+          "problemId": 27,
+          "rank": 59
+        },
+        {
+          "problemId": 31,
+          "rank": 60
+        },
+        {
+          "problemId": 238,
+          "rank": 61
+        },
+        {
+          "problemId": 239,
+          "rank": 62
+        },
+        {
+          "problemId": 704,
+          "rank": 63
+        },
+        {
+          "problemId": 876,
+          "rank": 64
+        },
+        {
+          "problemId": 39,
+          "rank": 65
+        },
+        {
+          "problemId": 162,
+          "rank": 66
+        },
+        {
+          "problemId": 181,
+          "rank": 67
+        },
+        {
+          "problemId": 268,
+          "rank": 68
+        },
+        {
+          "problemId": 344,
+          "rank": 69
+        },
+        {
+          "problemId": 424,
+          "rank": 70
+        },
+        {
+          "problemId": 496,
+          "rank": 71
+        },
+        {
+          "problemId": 1502,
+          "rank": 72
+        },
+        {
+          "problemId": 41,
+          "rank": 73
+        },
+        {
+          "problemId": 46,
+          "rank": 74
+        },
+        {
+          "problemId": 84,
+          "rank": 75
+        },
+        {
+          "problemId": 102,
+          "rank": 76
+        },
+        {
+          "problemId": 125,
+          "rank": 77
+        },
+        {
+          "problemId": 394,
+          "rank": 78
+        },
+        {
+          "problemId": 503,
+          "rank": 79
+        },
+        {
+          "problemId": 994,
+          "rank": 80
+        },
+        {
+          "problemId": 75,
+          "rank": 81
+        },
+        {
+          "problemId": 100,
+          "rank": 82
+        },
+        {
+          "problemId": 152,
+          "rank": 83
+        },
+        {
+          "problemId": 215,
+          "rank": 84
+        },
+        {
+          "problemId": 253,
+          "rank": 85
+        },
+        {
+          "problemId": 287,
+          "rank": 86
+        },
+        {
+          "problemId": 322,
+          "rank": 87
+        },
+        {
+          "problemId": 739,
+          "rank": 88
+        },
+        {
+          "problemId": 1480,
+          "rank": 89
+        },
+        {
+          "problemId": 34,
+          "rank": 90
+        },
+        {
+          "problemId": 118,
+          "rank": 91
+        },
+        {
+          "problemId": 122,
+          "rank": 92
+        },
+        {
+          "problemId": 204,
+          "rank": 93
+        },
+        {
+          "problemId": 207,
+          "rank": 94
+        },
+        {
+          "problemId": 219,
+          "rank": 95
+        },
+        {
+          "problemId": 540,
+          "rank": 96
+        },
+        {
+          "problemId": 904,
+          "rank": 97
+        },
+        {
+          "problemId": 1944,
+          "rank": 98
+        },
+        {
+          "problemId": 2235,
+          "rank": 99
+        },
+        {
+          "problemId": 6,
+          "rank": 100
+        },
+        {
+          "problemId": 10,
+          "rank": 101
+        }
+      ]
+    },
+    {
+      "id": "meta-top-100",
+      "name": "Meta Interview \u2014 Top 100",
+      "company": "Meta",
+      "description": "Company-specific curated interview deck. Ranking preserved from the supplied source list.",
+      "version": 1,
+      "sourceCount": 100,
+      "problems": [
+        {
+          "problemId": 1,
+          "rank": 1
+        },
+        {
+          "problemId": 121,
+          "rank": 2
+        },
+        {
+          "problemId": 560,
+          "rank": 3
+        },
+        {
+          "problemId": 3,
+          "rank": 4
+        },
+        {
+          "problemId": 4,
+          "rank": 5
+        },
+        {
+          "problemId": 26,
+          "rank": 6
+        },
+        {
+          "problemId": 2,
+          "rank": 7
+        },
+        {
+          "problemId": 20,
+          "rank": 8
+        },
+        {
+          "problemId": 125,
+          "rank": 9
+        },
+        {
+          "problemId": 15,
+          "rank": 10
+        },
+        {
+          "problemId": 408,
+          "rank": 11
+        },
+        {
+          "problemId": 1249,
+          "rank": 12
+        },
+        {
+          "problemId": 31,
+          "rank": 13
+        },
+        {
+          "problemId": 9,
+          "rank": 14
+        },
+        {
+          "problemId": 215,
+          "rank": 15
+        },
+        {
+          "problemId": 5,
+          "rank": 16
+        },
+        {
+          "problemId": 56,
+          "rank": 17
+        },
+        {
+          "problemId": 88,
+          "rank": 18
+        },
+        {
+          "problemId": 1004,
+          "rank": 19
+        },
+        {
+          "problemId": 283,
+          "rank": 20
+        },
+        {
+          "problemId": 11,
+          "rank": 21
+        },
+        {
+          "problemId": 50,
+          "rank": 22
+        },
+        {
+          "problemId": 53,
+          "rank": 23
+        },
+        {
+          "problemId": 209,
+          "rank": 24
+        },
+        {
+          "problemId": 543,
+          "rank": 25
+        },
+        {
+          "problemId": 73,
+          "rank": 26
+        },
+        {
+          "problemId": 162,
+          "rank": 27
+        },
+        {
+          "problemId": 199,
+          "rank": 28
+        },
+        {
+          "problemId": 200,
+          "rank": 29
+        },
+        {
+          "problemId": 322,
+          "rank": 30
+        },
+        {
+          "problemId": 7,
+          "rank": 31
+        },
+        {
+          "problemId": 33,
+          "rank": 32
+        },
+        {
+          "problemId": 49,
+          "rank": 33
+        },
+        {
+          "problemId": 242,
+          "rank": 34
+        },
+        {
+          "problemId": 314,
+          "rank": 35
+        },
+        {
+          "problemId": 528,
+          "rank": 36
+        },
+        {
+          "problemId": 34,
+          "rank": 37
+        },
+        {
+          "problemId": 39,
+          "rank": 38
+        },
+        {
+          "problemId": 128,
+          "rank": 39
+        },
+        {
+          "problemId": 146,
+          "rank": 40
+        },
+        {
+          "problemId": 189,
+          "rank": 41
+        },
+        {
+          "problemId": 339,
+          "rank": 42
+        },
+        {
+          "problemId": 680,
+          "rank": 43
+        },
+        {
+          "problemId": 875,
+          "rank": 44
+        },
+        {
+          "problemId": 1539,
+          "rank": 45
+        },
+        {
+          "problemId": 13,
+          "rank": 46
+        },
+        {
+          "problemId": 16,
+          "rank": 47
+        },
+        {
+          "problemId": 21,
+          "rank": 48
+        },
+        {
+          "problemId": 32,
+          "rank": 49
+        },
+        {
+          "problemId": 35,
+          "rank": 50
+        },
+        {
+          "problemId": 42,
+          "rank": 51
+        },
+        {
+          "problemId": 51,
+          "rank": 52
+        },
+        {
+          "problemId": 55,
+          "rank": 53
+        },
+        {
+          "problemId": 66,
+          "rank": 54
+        },
+        {
+          "problemId": 167,
+          "rank": 55
+        },
+        {
+          "problemId": 169,
+          "rank": 56
+        },
+        {
+          "problemId": 236,
+          "rank": 57
+        },
+        {
+          "problemId": 238,
+          "rank": 58
+        },
+        {
+          "problemId": 349,
+          "rank": 59
+        },
+        {
+          "problemId": 1929,
+          "rank": 60
+        },
+        {
+          "problemId": 14,
+          "rank": 61
+        },
+        {
+          "problemId": 27,
+          "rank": 62
+        },
+        {
+          "problemId": 28,
+          "rank": 63
+        },
+        {
+          "problemId": 129,
+          "rank": 64
+        },
+        {
+          "problemId": 207,
+          "rank": 65
+        },
+        {
+          "problemId": 217,
+          "rank": 66
+        },
+        {
+          "problemId": 231,
+          "rank": 67
+        },
+        {
+          "problemId": 509,
+          "rank": 68
+        },
+        {
+          "problemId": 647,
+          "rank": 69
+        },
+        {
+          "problemId": 1650,
+          "rank": 70
+        },
+        {
+          "problemId": 18,
+          "rank": 71
+        },
+        {
+          "problemId": 22,
+          "rank": 72
+        },
+        {
+          "problemId": 23,
+          "rank": 73
+        },
+        {
+          "problemId": 71,
+          "rank": 74
+        },
+        {
+          "problemId": 76,
+          "rank": 75
+        },
+        {
+          "problemId": 77,
+          "rank": 76
+        },
+        {
+          "problemId": 122,
+          "rank": 77
+        },
+        {
+          "problemId": 136,
+          "rank": 78
+        },
+        {
+          "problemId": 141,
+          "rank": 79
+        },
+        {
+          "problemId": 143,
+          "rank": 80
+        },
+        {
+          "problemId": 347,
+          "rank": 81
+        },
+        {
+          "problemId": 485,
+          "rank": 82
+        },
+        {
+          "problemId": 704,
+          "rank": 83
+        },
+        {
+          "problemId": 938,
+          "rank": 84
+        },
+        {
+          "problemId": 17,
+          "rank": 85
+        },
+        {
+          "problemId": 19,
+          "rank": 86
+        },
+        {
+          "problemId": 48,
+          "rank": 87
+        },
+        {
+          "problemId": 84,
+          "rank": 88
+        },
+        {
+          "problemId": 101,
+          "rank": 89
+        },
+        {
+          "problemId": 108,
+          "rank": 90
+        },
+        {
+          "problemId": 131,
+          "rank": 91
+        },
+        {
+          "problemId": 138,
+          "rank": 92
+        },
+        {
+          "problemId": 175,
+          "rank": 93
+        },
+        {
+          "problemId": 198,
+          "rank": 94
+        },
+        {
+          "problemId": 287,
+          "rank": 95
+        },
+        {
+          "problemId": 343,
+          "rank": 96
+        },
+        {
+          "problemId": 540,
+          "rank": 97
+        },
+        {
+          "problemId": 678,
+          "rank": 98
+        },
+        {
+          "problemId": 827,
+          "rank": 99
+        },
+        {
+          "problemId": 863,
+          "rank": 100
+        }
+      ]
     }
   ],
   "problems": [
@@ -31,219 +1241,2361 @@
       "id": 1,
       "title": "Two Sum",
       "difficulty": "Easy",
-      "pattern": "Hash Map",
-      "patternFamily": "Arrays",
+      "acceptanceRate": 58.0,
       "url": "https://leetcode.com/problems/two-sum/",
-      "description": "Given an array of integers and a target value, find the two distinct positions whose values add up to the target. Return their indices.",
-      "examples": [
-        {
-          "input": "nums = [2,7,11,15], target = 9",
-          "output": "[0,1]"
-        }
-      ],
-      "constraints": [
-        "Assume exactly one valid pair exists.",
-        "The same array element cannot be used twice."
-      ],
-      "trigger": "Need to find a complementary value while scanning the array once.",
-      "aha": "Instead of searching for the partner after seeing a number, store previously seen values so the complement lookup is O(1) average.",
+      "pattern": "Hash Map",
+      "trigger": "Need a complementary value while scanning once.",
+      "aha": "Store previously seen values so complement lookup is O(1) average.",
       "approach": [
-        "Create a hash map from value to its index.",
-        "Scan the array from left to right.",
-        "For each value x, compute target - x.",
-        "If the complement is already in the map, return its index and the current index.",
+        "Scan left to right.",
+        "For x, compute target - x.",
+        "If the complement is already seen, return both indices.",
         "Otherwise store x and continue."
       ],
-      "solutions": {
-        "python": "def twoSum(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, x in enumerate(nums):\n        need = target - x\n        if need in seen:\n            return [seen[need], i]\n        seen[x] = i\n    return []"
-      },
-      "timeComplexity": "O(N)",
-      "spaceComplexity": "O(N)",
-      "commonMistakes": [
-        "Checking the map after inserting the current value.",
-        "Using nested loops when a hash map gives linear expected time."
-      ],
-      "followUps": [
-        "What changes if the array is sorted?",
-        "How would you handle multiple valid pairs?"
-      ],
-      "staffInsights": [
-        "The hash map trades memory for latency. In a distributed setting, partitioning by value would be difficult because the complementary lookup needs shared state."
-      ]
+      "python": "def twoSum(nums, target):\n    seen = {}\n    for i, x in enumerate(nums):\n        need = target - x\n        if need in seen:\n            return [seen[need], i]\n        seen[x] = i\n    return []",
+      "time": "O(N)",
+      "space": "O(N)"
     },
     {
-      "id": 20,
-      "title": "Valid Parentheses",
-      "difficulty": "Easy",
-      "pattern": "Stack",
-      "patternFamily": "Stacks",
-      "url": "https://leetcode.com/problems/valid-parentheses/",
-      "description": "Determine whether a string containing bracket characters is correctly nested and every closing bracket matches the most recent unmatched opener.",
-      "examples": [
-        {
-          "input": "s = \"({[]})\"",
-          "output": "true"
-        }
-      ],
-      "constraints": [
-        "Input contains only bracket characters for this exercise."
-      ],
-      "trigger": "The most recent unmatched opening bracket must be matched first.",
-      "aha": "Nested matching is last-in-first-out, which is exactly the behavior of a stack.",
-      "approach": [
-        "Create a stack for opening brackets.",
-        "Map each closing bracket to its matching opener.",
-        "Push opening brackets.",
-        "For a closing bracket, verify that the stack top is the expected opener.",
-        "Return true only when the stack is empty at the end."
-      ],
-      "solutions": {
-        "python": "def isValid(s: str) -> bool:\n    stack = []\n    pairs = {')': '(', ']': '[', '}': '{'}\n    for ch in s:\n        if ch in pairs:\n            if not stack or stack.pop() != pairs[ch]:\n                return False\n        else:\n            stack.append(ch)\n    return not stack"
-      },
-      "timeComplexity": "O(N)",
-      "spaceComplexity": "O(N)",
-      "commonMistakes": [
-        "Forgetting to check an empty stack before pop.",
-        "Returning true without verifying that all openers were closed."
-      ],
-      "followUps": [
-        "How would you support wildcard brackets?",
-        "Can you validate a streaming input?"
-      ],
-      "staffInsights": [
-        "A streaming validator can process arbitrarily large input without storing the full string; only unmatched openers need to remain in memory."
-      ]
-    },
-    {
-      "id": 121,
-      "title": "Best Time to Buy and Sell Stock",
-      "difficulty": "Easy",
-      "pattern": "One-Pass Scan",
-      "patternFamily": "Arrays",
-      "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
-      "description": "Given daily prices, choose one day to buy and a later day to sell to maximize the resulting profit.",
-      "examples": [
-        {
-          "input": "prices = [7,1,5,3,6,4]",
-          "output": "5"
-        }
-      ],
-      "constraints": [
-        "Only one buy and one sell are allowed.",
-        "The sell must occur after the buy."
-      ],
-      "trigger": "At each price, the best previous buy is simply the minimum price seen so far.",
-      "aha": "You do not need to remember every candidate buy day; keep only the minimum price and the best profit so far.",
-      "approach": [
-        "Initialize the minimum price to infinity and best profit to zero.",
-        "Scan prices from left to right.",
-        "Update the minimum price.",
-        "Compute today's profit using the minimum prior price.",
-        "Keep the maximum profit."
-      ],
-      "solutions": {
-        "python": "def maxProfit(prices: list[int]) -> int:\n    min_price = float('inf')\n    best = 0\n    for price in prices:\n        min_price = min(min_price, price)\n        best = max(best, price - min_price)\n    return best"
-      },
-      "timeComplexity": "O(N)",
-      "spaceComplexity": "O(1)",
-      "commonMistakes": [
-        "Allowing the buy day to occur after the sell day.",
-        "Tracking all prior prices unnecessarily."
-      ],
-      "followUps": [
-        "What changes if multiple transactions are allowed?",
-        "What if a transaction fee is charged?"
-      ],
-      "staffInsights": [
-        "The one-pass invariant is simple and robust. In a streaming analytics system, the same state can be maintained without retaining the full price history."
-      ]
-    },
-    {
-      "id": 242,
-      "title": "Valid Anagram",
-      "difficulty": "Easy",
-      "pattern": "Frequency Map",
-      "patternFamily": "Hashing",
-      "url": "https://leetcode.com/problems/valid-anagram/",
-      "description": "Determine whether two strings contain exactly the same characters with the same frequencies.",
-      "examples": [
-        {
-          "input": "s = \"anagram\", t = \"nagaram\"",
-          "output": "true"
-        }
-      ],
-      "constraints": [
-        "Character ordering does not matter."
-      ],
-      "trigger": "Same multiset of characters means equal frequency for every character.",
-      "aha": "Count occurrences rather than comparing positions.",
-      "approach": [
-        "If lengths differ, return false.",
-        "Build a frequency map from the first string.",
-        "Subtract counts using the second string.",
-        "Reject if a character is missing or over-consumed.",
-        "Return true when all counts balance."
-      ],
-      "solutions": {
-        "python": "from collections import Counter\n\ndef isAnagram(s: str, t: str) -> bool:\n    return Counter(s) == Counter(t)"
-      },
-      "timeComplexity": "O(N)",
-      "spaceComplexity": "O(K)",
-      "commonMistakes": [
-        "Sorting both strings when linear counting is sufficient.",
-        "Ignoring length mismatch."
-      ],
-      "followUps": [
-        "How would you solve it with a fixed alphabet?",
-        "How would you process very large strings in chunks?"
-      ],
-      "staffInsights": [
-        "For a bounded alphabet, the frequency structure is effectively constant-sized. For large Unicode domains, memory depends on the number of distinct symbols."
-      ]
+      "id": 2,
+      "title": "Add Two Numbers",
+      "difficulty": "Medium",
+      "acceptanceRate": 49.1,
+      "url": "https://leetcode.com/problems/add-two-numbers/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
     },
     {
       "id": 3,
       "title": "Longest Substring Without Repeating Characters",
       "difficulty": "Medium",
-      "pattern": "Sliding Window",
-      "patternFamily": "Two Pointers",
+      "acceptanceRate": 39.8,
       "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
-      "description": "Find the maximum length of a contiguous substring in which every character appears at most once.",
-      "examples": [
-        {
-          "input": "s = \"abcabcbb\"",
-          "output": "3"
-        }
-      ],
-      "constraints": [
-        "The answer must be a contiguous substring."
-      ],
-      "trigger": "Need the longest contiguous region satisfying a uniqueness constraint.",
-      "aha": "Maintain a window that is always valid; when a duplicate appears, move the left boundary past the previous occurrence.",
+      "pattern": "Sliding Window",
+      "trigger": "Find the longest contiguous region satisfying a uniqueness constraint.",
+      "aha": "Maintain a valid window and move the left boundary past the previous duplicate.",
       "approach": [
-        "Maintain a left boundary and a map from character to its latest index.",
-        "Scan the right boundary across the string.",
-        "When a duplicate appears inside the current window, move left forward.",
-        "Update the latest index for the current character.",
-        "Track the maximum window length."
+        "Track each character's latest index.",
+        "Expand the right boundary.",
+        "When a duplicate is inside the window, move left.",
+        "Update the maximum window length."
       ],
-      "solutions": {
-        "python": "def lengthOfLongestSubstring(s: str) -> int:\n    last = {}\n    left = 0\n    best = 0\n    for right, ch in enumerate(s):\n        if ch in last and last[ch] >= left:\n            left = last[ch] + 1\n        last[ch] = right\n        best = max(best, right - left + 1)\n    return best"
-      },
-      "timeComplexity": "O(N)",
-      "spaceComplexity": "O(K)",
-      "commonMistakes": [
-        "Moving the left pointer backward.",
-        "Resetting the whole window when a duplicate appears.",
-        "Confusing substring with subsequence."
+      "python": "def lengthOfLongestSubstring(s):\n    last = {}\n    left = best = 0\n    for right, ch in enumerate(s):\n        if ch in last and last[ch] >= left:\n            left = last[ch] + 1\n        last[ch] = right\n        best = max(best, right - left + 1)\n    return best",
+      "time": "O(N)",
+      "space": "O(K)"
+    },
+    {
+      "id": 4,
+      "title": "Median of Two Sorted Arrays",
+      "difficulty": "Hard",
+      "acceptanceRate": 47.4,
+      "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 5,
+      "title": "Longest Palindromic Substring",
+      "difficulty": "Medium",
+      "acceptanceRate": 38.5,
+      "url": "https://leetcode.com/problems/longest-palindromic-substring/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 6,
+      "title": "Zigzag Conversion",
+      "difficulty": "Medium",
+      "acceptanceRate": 54.9,
+      "url": "https://leetcode.com/problems/zigzag-conversion/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 7,
+      "title": "Reverse Integer",
+      "difficulty": "Medium",
+      "acceptanceRate": 32.4,
+      "url": "https://leetcode.com/problems/reverse-integer/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 8,
+      "title": "String to Integer (atoi)",
+      "difficulty": "Medium",
+      "acceptanceRate": 21.6,
+      "url": "https://leetcode.com/problems/string-to-integer-atoi/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 9,
+      "title": "Palindrome Number",
+      "difficulty": "Easy",
+      "acceptanceRate": 60.9,
+      "url": "https://leetcode.com/problems/palindrome-number/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 10,
+      "title": "Regular Expression Matching",
+      "difficulty": "Hard",
+      "acceptanceRate": 31.6,
+      "url": "https://leetcode.com/problems/regular-expression-matching/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 11,
+      "title": "Container With Most Water",
+      "difficulty": "Medium",
+      "acceptanceRate": 60.6,
+      "url": "https://leetcode.com/problems/container-with-most-water/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 13,
+      "title": "Roman to Integer",
+      "difficulty": "Easy",
+      "acceptanceRate": 67.0,
+      "url": "https://leetcode.com/problems/roman-to-integer/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 14,
+      "title": "Longest Common Prefix",
+      "difficulty": "Easy",
+      "acceptanceRate": 48.2,
+      "url": "https://leetcode.com/problems/longest-common-prefix/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 15,
+      "title": "3Sum",
+      "difficulty": "Medium",
+      "acceptanceRate": 39.7,
+      "url": "https://leetcode.com/problems/3sum/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 16,
+      "title": "3Sum Closest",
+      "difficulty": "Medium",
+      "acceptanceRate": 49.2,
+      "url": "https://leetcode.com/problems/3sum-closest/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 17,
+      "title": "Letter Combinations of a Phone Number",
+      "difficulty": "Medium",
+      "acceptanceRate": 66.7,
+      "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 18,
+      "title": "4Sum",
+      "difficulty": "Medium",
+      "acceptanceRate": 41.5,
+      "url": "https://leetcode.com/problems/4sum/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 19,
+      "title": "Remove Nth Node From End of List",
+      "difficulty": "Medium",
+      "acceptanceRate": 52.4,
+      "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 20,
+      "title": "Valid Parentheses",
+      "difficulty": "Easy",
+      "acceptanceRate": 44.7,
+      "url": "https://leetcode.com/problems/valid-parentheses/",
+      "pattern": "Stack",
+      "trigger": "The most recent unmatched opener must be closed first.",
+      "aha": "Nested matching is last-in-first-out, exactly what a stack models.",
+      "approach": [
+        "Push opening brackets.",
+        "For a closing bracket, verify the stack top matches.",
+        "Reject mismatches or an empty stack.",
+        "Return true only when the stack is empty."
       ],
-      "followUps": [
-        "How would you return the actual substring?",
-        "How would the problem change if up to K duplicates were allowed?"
+      "python": "def isValid(s):\n    stack = []\n    pairs = {')':'(', ']':'[', '}':'{'}\n    for ch in s:\n        if ch in pairs:\n            if not stack or stack.pop() != pairs[ch]: return False\n        else:\n            stack.append(ch)\n    return not stack",
+      "time": "O(N)",
+      "space": "O(N)"
+    },
+    {
+      "id": 21,
+      "title": "Merge Two Sorted Lists",
+      "difficulty": "Easy",
+      "acceptanceRate": 68.7,
+      "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 22,
+      "title": "Generate Parentheses",
+      "difficulty": "Medium",
+      "acceptanceRate": 79.1,
+      "url": "https://leetcode.com/problems/generate-parentheses/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 23,
+      "title": "Merge k Sorted Lists",
+      "difficulty": "Hard",
+      "acceptanceRate": 60.3,
+      "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 26,
+      "title": "Remove Duplicates from Sorted Array",
+      "difficulty": "Easy",
+      "acceptanceRate": 63.6,
+      "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 27,
+      "title": "Remove Element",
+      "difficulty": "Easy",
+      "acceptanceRate": 62.4,
+      "url": "https://leetcode.com/problems/remove-element/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 28,
+      "title": "Find the Index of the First Occurrence in a String",
+      "difficulty": "Easy",
+      "acceptanceRate": 47.2,
+      "url": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 31,
+      "title": "Next Permutation",
+      "difficulty": "Medium",
+      "acceptanceRate": 46.0,
+      "url": "https://leetcode.com/problems/next-permutation/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 32,
+      "title": "Longest Valid Parentheses",
+      "difficulty": "Hard",
+      "acceptanceRate": 39.5,
+      "url": "https://leetcode.com/problems/longest-valid-parentheses/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 33,
+      "title": "Search in Rotated Sorted Array",
+      "difficulty": "Medium",
+      "acceptanceRate": 45.5,
+      "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 34,
+      "title": "Find First and Last Position of Element in Sorted Array",
+      "difficulty": "Medium",
+      "acceptanceRate": 49.5,
+      "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 35,
+      "title": "Search Insert Position",
+      "difficulty": "Easy",
+      "acceptanceRate": 52.0,
+      "url": "https://leetcode.com/problems/search-insert-position/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 39,
+      "title": "Combination Sum",
+      "difficulty": "Medium",
+      "acceptanceRate": 77.0,
+      "url": "https://leetcode.com/problems/combination-sum/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 41,
+      "title": "First Missing Positive",
+      "difficulty": "Hard",
+      "acceptanceRate": 43.5,
+      "url": "https://leetcode.com/problems/first-missing-positive/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 42,
+      "title": "Trapping Rain Water",
+      "difficulty": "Hard",
+      "acceptanceRate": 68.0,
+      "url": "https://leetcode.com/problems/trapping-rain-water/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 46,
+      "title": "Permutations",
+      "difficulty": "Medium",
+      "acceptanceRate": 82.3,
+      "url": "https://leetcode.com/problems/permutations/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 48,
+      "title": "Rotate Image",
+      "difficulty": "Medium",
+      "acceptanceRate": 80.6,
+      "url": "https://leetcode.com/problems/rotate-image/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 49,
+      "title": "Group Anagrams",
+      "difficulty": "Medium",
+      "acceptanceRate": 73.1,
+      "url": "https://leetcode.com/problems/group-anagrams/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 50,
+      "title": "Pow(x, n)",
+      "difficulty": "Medium",
+      "acceptanceRate": 39.2,
+      "url": "https://leetcode.com/problems/pow-x-n/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 51,
+      "title": "N-Queens",
+      "difficulty": "Hard",
+      "acceptanceRate": 76.3,
+      "url": "https://leetcode.com/problems/n-queens/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 53,
+      "title": "Maximum Subarray",
+      "difficulty": "Medium",
+      "acceptanceRate": 53.7,
+      "url": "https://leetcode.com/problems/maximum-subarray/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 54,
+      "title": "Spiral Matrix",
+      "difficulty": "Medium",
+      "acceptanceRate": 57.6,
+      "url": "https://leetcode.com/problems/spiral-matrix/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 55,
+      "title": "Jump Game",
+      "difficulty": "Medium",
+      "acceptanceRate": 41.4,
+      "url": "https://leetcode.com/problems/jump-game/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 56,
+      "title": "Merge Intervals",
+      "difficulty": "Medium",
+      "acceptanceRate": 52.6,
+      "url": "https://leetcode.com/problems/merge-intervals/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 62,
+      "title": "Unique Paths",
+      "difficulty": "Medium",
+      "acceptanceRate": 67.2,
+      "url": "https://leetcode.com/problems/unique-paths/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 66,
+      "title": "Plus One",
+      "difficulty": "Easy",
+      "acceptanceRate": 50.4,
+      "url": "https://leetcode.com/problems/plus-one/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 67,
+      "title": "Add Binary",
+      "difficulty": "Easy",
+      "acceptanceRate": 58.5,
+      "url": "https://leetcode.com/problems/add-binary/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 69,
+      "title": "Sqrt(x)",
+      "difficulty": "Easy",
+      "acceptanceRate": 42.2,
+      "url": "https://leetcode.com/problems/sqrt-x/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 70,
+      "title": "Climbing Stairs",
+      "difficulty": "Easy",
+      "acceptanceRate": 54.3,
+      "url": "https://leetcode.com/problems/climbing-stairs/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 71,
+      "title": "Simplify Path",
+      "difficulty": "Medium",
+      "acceptanceRate": 51.2,
+      "url": "https://leetcode.com/problems/simplify-path/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 73,
+      "title": "Set Matrix Zeroes",
+      "difficulty": "Medium",
+      "acceptanceRate": 63.5,
+      "url": "https://leetcode.com/problems/set-matrix-zeroes/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 75,
+      "title": "Sort Colors",
+      "difficulty": "Medium",
+      "acceptanceRate": 70.2,
+      "url": "https://leetcode.com/problems/sort-colors/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 76,
+      "title": "Minimum Window Substring",
+      "difficulty": "Hard",
+      "acceptanceRate": 48.3,
+      "url": "https://leetcode.com/problems/minimum-window-substring/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 77,
+      "title": "Combinations",
+      "difficulty": "Medium",
+      "acceptanceRate": 75.0,
+      "url": "https://leetcode.com/problems/combinations/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 78,
+      "title": "Subsets",
+      "difficulty": "Medium",
+      "acceptanceRate": 82.7,
+      "url": "https://leetcode.com/problems/subsets/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 79,
+      "title": "Word Search",
+      "difficulty": "Medium",
+      "acceptanceRate": 47.9,
+      "url": "https://leetcode.com/problems/word-search/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 84,
+      "title": "Largest Rectangle in Histogram",
+      "difficulty": "Hard",
+      "acceptanceRate": 50.7,
+      "url": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 88,
+      "title": "Merge Sorted Array",
+      "difficulty": "Easy",
+      "acceptanceRate": 55.5,
+      "url": "https://leetcode.com/problems/merge-sorted-array/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 100,
+      "title": "Same Tree",
+      "difficulty": "Easy",
+      "acceptanceRate": 67.8,
+      "url": "https://leetcode.com/problems/same-tree/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 101,
+      "title": "Symmetric Tree",
+      "difficulty": "Easy",
+      "acceptanceRate": 61.8,
+      "url": "https://leetcode.com/problems/symmetric-tree/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 102,
+      "title": "Binary Tree Level Order Traversal",
+      "difficulty": "Medium",
+      "acceptanceRate": 73.3,
+      "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 108,
+      "title": "Convert Sorted Array to Binary Search Tree",
+      "difficulty": "Easy",
+      "acceptanceRate": 76.0,
+      "url": "https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 118,
+      "title": "Pascal's Triangle",
+      "difficulty": "Easy",
+      "acceptanceRate": 79.3,
+      "url": "https://leetcode.com/problems/pascal-s-triangle/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 121,
+      "title": "Best Time to Buy and Sell Stock",
+      "difficulty": "Easy",
+      "acceptanceRate": 57.3,
+      "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+      "pattern": "One-Pass Scan",
+      "trigger": "Need the best later selling price relative to the lowest earlier buy price.",
+      "aha": "Keep only the minimum price seen so far and the best profit.",
+      "approach": [
+        "Track minimum price.",
+        "For each price, compute profit versus the minimum.",
+        "Update the best profit.",
+        "Return the maximum."
       ],
-      "staffInsights": [
-        "The key invariant is that the active window remains valid. This pattern generalizes well to streaming systems where only a bounded active state is required."
-      ]
+      "python": "def maxProfit(prices):\n    min_price = float('inf')\n    best = 0\n    for price in prices:\n        min_price = min(min_price, price)\n        best = max(best, price - min_price)\n    return best",
+      "time": "O(N)",
+      "space": "O(1)"
+    },
+    {
+      "id": 122,
+      "title": "Best Time to Buy and Sell Stock II",
+      "difficulty": "Medium",
+      "acceptanceRate": 71.5,
+      "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 124,
+      "title": "Binary Tree Maximum Path Sum",
+      "difficulty": "Hard",
+      "acceptanceRate": 42.7,
+      "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 125,
+      "title": "Valid Palindrome",
+      "difficulty": "Easy",
+      "acceptanceRate": 54.1,
+      "url": "https://leetcode.com/problems/valid-palindrome/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 127,
+      "title": "Word Ladder",
+      "difficulty": "Hard",
+      "acceptanceRate": 46.3,
+      "url": "https://leetcode.com/problems/word-ladder/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 128,
+      "title": "Longest Consecutive Sequence",
+      "difficulty": "Medium",
+      "acceptanceRate": 47.2,
+      "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 129,
+      "title": "Sum Root to Leaf Numbers",
+      "difficulty": "Medium",
+      "acceptanceRate": 70.3,
+      "url": "https://leetcode.com/problems/sum-root-to-leaf-numbers/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 131,
+      "title": "Palindrome Partitioning",
+      "difficulty": "Medium",
+      "acceptanceRate": 74.5,
+      "url": "https://leetcode.com/problems/palindrome-partitioning/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 136,
+      "title": "Single Number",
+      "difficulty": "Easy",
+      "acceptanceRate": 78.2,
+      "url": "https://leetcode.com/problems/single-number/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 138,
+      "title": "Copy List with Random Pointer",
+      "difficulty": "Medium",
+      "acceptanceRate": 63.5,
+      "url": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 141,
+      "title": "Linked List Cycle",
+      "difficulty": "Easy",
+      "acceptanceRate": 54.9,
+      "url": "https://leetcode.com/problems/linked-list-cycle/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 143,
+      "title": "Reorder List",
+      "difficulty": "Medium",
+      "acceptanceRate": 66.0,
+      "url": "https://leetcode.com/problems/reorder-list/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 146,
+      "title": "LRU Cache",
+      "difficulty": "Medium",
+      "acceptanceRate": 47.9,
+      "url": "https://leetcode.com/problems/lru-cache/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 152,
+      "title": "Maximum Product Subarray",
+      "difficulty": "Medium",
+      "acceptanceRate": 36.9,
+      "url": "https://leetcode.com/problems/maximum-product-subarray/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 162,
+      "title": "Find Peak Element",
+      "difficulty": "Medium",
+      "acceptanceRate": 47.1,
+      "url": "https://leetcode.com/problems/find-peak-element/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 167,
+      "title": "Two Sum II - Input Array Is Sorted",
+      "difficulty": "Medium",
+      "acceptanceRate": 65.7,
+      "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 169,
+      "title": "Majority Element",
+      "difficulty": "Easy",
+      "acceptanceRate": 66.5,
+      "url": "https://leetcode.com/problems/majority-element/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 175,
+      "title": "Combine Two Tables",
+      "difficulty": "Easy",
+      "acceptanceRate": 79.9,
+      "url": "https://leetcode.com/problems/combine-two-tables/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 181,
+      "title": "Employees Earning More Than Their Managers",
+      "difficulty": "Easy",
+      "acceptanceRate": 73.7,
+      "url": "https://leetcode.com/problems/employees-earning-more-than-their-managers/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 189,
+      "title": "Rotate Array",
+      "difficulty": "Medium",
+      "acceptanceRate": 45.3,
+      "url": "https://leetcode.com/problems/rotate-array/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 198,
+      "title": "House Robber",
+      "difficulty": "Medium",
+      "acceptanceRate": 53.5,
+      "url": "https://leetcode.com/problems/house-robber/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 199,
+      "title": "Binary Tree Right Side View",
+      "difficulty": "Medium",
+      "acceptanceRate": 71.0,
+      "url": "https://leetcode.com/problems/binary-tree-right-side-view/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 200,
+      "title": "Number of Islands",
+      "difficulty": "Medium",
+      "acceptanceRate": 65.0,
+      "url": "https://leetcode.com/problems/number-of-islands/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 202,
+      "title": "Happy Number",
+      "difficulty": "Easy",
+      "acceptanceRate": 60.1,
+      "url": "https://leetcode.com/problems/happy-number/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 204,
+      "title": "Count Primes",
+      "difficulty": "Medium",
+      "acceptanceRate": 36.4,
+      "url": "https://leetcode.com/problems/count-primes/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 206,
+      "title": "Reverse Linked List",
+      "difficulty": "Easy",
+      "acceptanceRate": 80.9,
+      "url": "https://leetcode.com/problems/reverse-linked-list/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 207,
+      "title": "Course Schedule",
+      "difficulty": "Medium",
+      "acceptanceRate": 52.0,
+      "url": "https://leetcode.com/problems/course-schedule/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 209,
+      "title": "Minimum Size Subarray Sum",
+      "difficulty": "Medium",
+      "acceptanceRate": 52.6,
+      "url": "https://leetcode.com/problems/minimum-size-subarray-sum/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 210,
+      "title": "Course Schedule II",
+      "difficulty": "Medium",
+      "acceptanceRate": 56.1,
+      "url": "https://leetcode.com/problems/course-schedule-ii/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 215,
+      "title": "Kth Largest Element in an Array",
+      "difficulty": "Medium",
+      "acceptanceRate": 69.2,
+      "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 217,
+      "title": "Contains Duplicate",
+      "difficulty": "Easy",
+      "acceptanceRate": 64.6,
+      "url": "https://leetcode.com/problems/contains-duplicate/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 219,
+      "title": "Contains Duplicate II",
+      "difficulty": "Easy",
+      "acceptanceRate": 51.8,
+      "url": "https://leetcode.com/problems/contains-duplicate-ii/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 231,
+      "title": "Power of Two",
+      "difficulty": "Easy",
+      "acceptanceRate": 50.4,
+      "url": "https://leetcode.com/problems/power-of-two/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 234,
+      "title": "Palindrome Linked List",
+      "difficulty": "Easy",
+      "acceptanceRate": 58.6,
+      "url": "https://leetcode.com/problems/palindrome-linked-list/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 236,
+      "title": "Lowest Common Ancestor of a Binary Tree",
+      "difficulty": "Medium",
+      "acceptanceRate": 70.0,
+      "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 238,
+      "title": "Product of Array Except Self",
+      "difficulty": "Medium",
+      "acceptanceRate": 69.2,
+      "url": "https://leetcode.com/problems/product-of-array-except-self/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 239,
+      "title": "Sliding Window Maximum",
+      "difficulty": "Hard",
+      "acceptanceRate": 49.1,
+      "url": "https://leetcode.com/problems/sliding-window-maximum/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 242,
+      "title": "Valid Anagram",
+      "difficulty": "Easy",
+      "acceptanceRate": 68.5,
+      "url": "https://leetcode.com/problems/valid-anagram/",
+      "pattern": "Frequency Map",
+      "trigger": "Two strings are anagrams when every character has the same frequency.",
+      "aha": "Count characters rather than comparing positions.",
+      "approach": [
+        "Reject different lengths.",
+        "Count characters in the first string.",
+        "Compare the frequency maps.",
+        "Return true when all counts match."
+      ],
+      "python": "from collections import Counter\n\ndef isAnagram(s, t):\n    return Counter(s) == Counter(t)",
+      "time": "O(N)",
+      "space": "O(K)"
+    },
+    {
+      "id": 253,
+      "title": "Meeting Rooms II",
+      "difficulty": "Medium",
+      "acceptanceRate": 52.8,
+      "url": "https://leetcode.com/problems/meeting-rooms-ii/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 268,
+      "title": "Missing Number",
+      "difficulty": "Easy",
+      "acceptanceRate": 72.5,
+      "url": "https://leetcode.com/problems/missing-number/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 283,
+      "title": "Move Zeroes",
+      "difficulty": "Easy",
+      "acceptanceRate": 64.3,
+      "url": "https://leetcode.com/problems/move-zeroes/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 287,
+      "title": "Find the Duplicate Number",
+      "difficulty": "Medium",
+      "acceptanceRate": 64.8,
+      "url": "https://leetcode.com/problems/find-the-duplicate-number/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 295,
+      "title": "Find Median from Data Stream",
+      "difficulty": "Hard",
+      "acceptanceRate": 54.9,
+      "url": "https://leetcode.com/problems/find-median-from-data-stream/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 314,
+      "title": "Binary Tree Vertical Order Traversal",
+      "difficulty": "Medium",
+      "acceptanceRate": 57.9,
+      "url": "https://leetcode.com/problems/binary-tree-vertical-order-traversal/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 322,
+      "title": "Coin Change",
+      "difficulty": "Medium",
+      "acceptanceRate": 49.0,
+      "url": "https://leetcode.com/problems/coin-change/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 339,
+      "title": "Nested List Weight Sum",
+      "difficulty": "Medium",
+      "acceptanceRate": 86.0,
+      "url": "https://leetcode.com/problems/nested-list-weight-sum/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 343,
+      "title": "Integer Break",
+      "difficulty": "Medium",
+      "acceptanceRate": 62.6,
+      "url": "https://leetcode.com/problems/integer-break/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 344,
+      "title": "Reverse String",
+      "difficulty": "Easy",
+      "acceptanceRate": 81.2,
+      "url": "https://leetcode.com/problems/reverse-string/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 347,
+      "title": "Top K Frequent Elements",
+      "difficulty": "Medium",
+      "acceptanceRate": 67.1,
+      "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 349,
+      "title": "Intersection of Two Arrays",
+      "difficulty": "Easy",
+      "acceptanceRate": 78.2,
+      "url": "https://leetcode.com/problems/intersection-of-two-arrays/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 394,
+      "title": "Decode String",
+      "difficulty": "Medium",
+      "acceptanceRate": 63.1,
+      "url": "https://leetcode.com/problems/decode-string/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 408,
+      "title": "Valid Word Abbreviation",
+      "difficulty": "Easy",
+      "acceptanceRate": 37.0,
+      "url": "https://leetcode.com/problems/valid-word-abbreviation/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 410,
+      "title": "Split Array Largest Sum",
+      "difficulty": "Hard",
+      "acceptanceRate": 61.2,
+      "url": "https://leetcode.com/problems/split-array-largest-sum/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 424,
+      "title": "Longest Repeating Character Replacement",
+      "difficulty": "Medium",
+      "acceptanceRate": 60.4,
+      "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 485,
+      "title": "Max Consecutive Ones",
+      "difficulty": "Easy",
+      "acceptanceRate": 65.9,
+      "url": "https://leetcode.com/problems/max-consecutive-ones/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 496,
+      "title": "Next Greater Element I",
+      "difficulty": "Easy",
+      "acceptanceRate": 76.7,
+      "url": "https://leetcode.com/problems/next-greater-element-i/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 503,
+      "title": "Next Greater Element II",
+      "difficulty": "Medium",
+      "acceptanceRate": 69.0,
+      "url": "https://leetcode.com/problems/next-greater-element-ii/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 509,
+      "title": "Fibonacci Number",
+      "difficulty": "Easy",
+      "acceptanceRate": 74.5,
+      "url": "https://leetcode.com/problems/fibonacci-number/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 528,
+      "title": "Random Pick with Weight",
+      "difficulty": "Medium",
+      "acceptanceRate": 49.2,
+      "url": "https://leetcode.com/problems/random-pick-with-weight/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 540,
+      "title": "Single Element in a Sorted Array",
+      "difficulty": "Medium",
+      "acceptanceRate": 59.4,
+      "url": "https://leetcode.com/problems/single-element-in-a-sorted-array/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 543,
+      "title": "Diameter of Binary Tree",
+      "difficulty": "Easy",
+      "acceptanceRate": 66.1,
+      "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 560,
+      "title": "Subarray Sum Equals K",
+      "difficulty": "Medium",
+      "acceptanceRate": 48.0,
+      "url": "https://leetcode.com/problems/subarray-sum-equals-k/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 621,
+      "title": "Task Scheduler",
+      "difficulty": "Medium",
+      "acceptanceRate": 63.6,
+      "url": "https://leetcode.com/problems/task-scheduler/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 647,
+      "title": "Palindromic Substrings",
+      "difficulty": "Medium",
+      "acceptanceRate": 73.1,
+      "url": "https://leetcode.com/problems/palindromic-substrings/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 678,
+      "title": "Valid Parenthesis String",
+      "difficulty": "Medium",
+      "acceptanceRate": 40.4,
+      "url": "https://leetcode.com/problems/valid-parenthesis-string/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 680,
+      "title": "Valid Palindrome II",
+      "difficulty": "Easy",
+      "acceptanceRate": 44.6,
+      "url": "https://leetcode.com/problems/valid-palindrome-ii/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 704,
+      "title": "Binary Search",
+      "difficulty": "Easy",
+      "acceptanceRate": 61.3,
+      "url": "https://leetcode.com/problems/binary-search/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 735,
+      "title": "Asteroid Collision",
+      "difficulty": "Medium",
+      "acceptanceRate": 48.8,
+      "url": "https://leetcode.com/problems/asteroid-collision/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 739,
+      "title": "Daily Temperatures",
+      "difficulty": "Medium",
+      "acceptanceRate": 69.1,
+      "url": "https://leetcode.com/problems/daily-temperatures/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 767,
+      "title": "Reorganize String",
+      "difficulty": "Medium",
+      "acceptanceRate": 57.4,
+      "url": "https://leetcode.com/problems/reorganize-string/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 796,
+      "title": "Rotate String",
+      "difficulty": "Easy",
+      "acceptanceRate": 66.7,
+      "url": "https://leetcode.com/problems/rotate-string/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 827,
+      "title": "Making A Large Island",
+      "difficulty": "Hard",
+      "acceptanceRate": 57.1,
+      "url": "https://leetcode.com/problems/making-a-large-island/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 863,
+      "title": "All Nodes Distance K in Binary Tree",
+      "difficulty": "Medium",
+      "acceptanceRate": 68.0,
+      "url": "https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 875,
+      "title": "Koko Eating Bananas",
+      "difficulty": "Medium",
+      "acceptanceRate": 50.4,
+      "url": "https://leetcode.com/problems/koko-eating-bananas/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 876,
+      "title": "Middle of the Linked List",
+      "difficulty": "Easy",
+      "acceptanceRate": 82.3,
+      "url": "https://leetcode.com/problems/middle-of-the-linked-list/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 904,
+      "title": "Fruit Into Baskets",
+      "difficulty": "Medium",
+      "acceptanceRate": 52.2,
+      "url": "https://leetcode.com/problems/fruit-into-baskets/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 938,
+      "title": "Range Sum of BST",
+      "difficulty": "Easy",
+      "acceptanceRate": 87.6,
+      "url": "https://leetcode.com/problems/range-sum-of-bst/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 977,
+      "title": "Squares of a Sorted Array",
+      "difficulty": "Easy",
+      "acceptanceRate": 74.1,
+      "url": "https://leetcode.com/problems/squares-of-a-sorted-array/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 994,
+      "title": "Rotting Oranges",
+      "difficulty": "Medium",
+      "acceptanceRate": 59.3,
+      "url": "https://leetcode.com/problems/rotting-oranges/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 1004,
+      "title": "Max Consecutive Ones III",
+      "difficulty": "Medium",
+      "acceptanceRate": 68.3,
+      "url": "https://leetcode.com/problems/max-consecutive-ones-iii/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 1011,
+      "title": "Capacity To Ship Packages Within D Days",
+      "difficulty": "Medium",
+      "acceptanceRate": 74.5,
+      "url": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 1249,
+      "title": "Minimum Remove to Make Valid Parentheses",
+      "difficulty": "Medium",
+      "acceptanceRate": 71.6,
+      "url": "https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 1480,
+      "title": "Running Sum of 1d Array",
+      "difficulty": "Easy",
+      "acceptanceRate": 87.1,
+      "url": "https://leetcode.com/problems/running-sum-of-1d-array/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 1502,
+      "title": "Can Make Arithmetic Progression From Sequence",
+      "difficulty": "Easy",
+      "acceptanceRate": 68.7,
+      "url": "https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 1539,
+      "title": "Kth Missing Positive Number",
+      "difficulty": "Easy",
+      "acceptanceRate": 63.8,
+      "url": "https://leetcode.com/problems/kth-missing-positive-number/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 1650,
+      "title": "Lowest Common Ancestor of a Binary Tree III",
+      "difficulty": "Medium",
+      "acceptanceRate": 83.0,
+      "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 1752,
+      "title": "Check if Array Is Sorted and Rotated",
+      "difficulty": "Easy",
+      "acceptanceRate": 57.6,
+      "url": "https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 1757,
+      "title": "Recyclable and Low Fat Products",
+      "difficulty": "Easy",
+      "acceptanceRate": 88.6,
+      "url": "https://leetcode.com/problems/recyclable-and-low-fat-products/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 1768,
+      "title": "Merge Strings Alternately",
+      "difficulty": "Easy",
+      "acceptanceRate": 82.1,
+      "url": "https://leetcode.com/problems/merge-strings-alternately/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 1929,
+      "title": "Concatenation of Array",
+      "difficulty": "Easy",
+      "acceptanceRate": 90.1,
+      "url": "https://leetcode.com/problems/concatenation-of-array/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 1944,
+      "title": "Number of Visible People in a Queue",
+      "difficulty": "Hard",
+      "acceptanceRate": 73.5,
+      "url": "https://leetcode.com/problems/number-of-visible-people-in-a-queue/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 2235,
+      "title": "Add Two Integers",
+      "difficulty": "Easy",
+      "acceptanceRate": 88.1,
+      "url": "https://leetcode.com/problems/add-two-integers/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 2667,
+      "title": "Create Hello World Function",
+      "difficulty": "Easy",
+      "acceptanceRate": 81.9,
+      "url": "https://leetcode.com/problems/create-hello-world-function/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 3413,
+      "title": "Maximum Coins From K Consecutive Bags",
+      "difficulty": "Medium",
+      "acceptanceRate": 26.6,
+      "url": "https://leetcode.com/problems/maximum-coins-from-k-consecutive-bags/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
+    },
+    {
+      "id": 3914,
+      "title": "Minimum Operations to Make Array Non Decreasing",
+      "difficulty": "Medium",
+      "acceptanceRate": 55.9,
+      "url": "https://leetcode.com/problems/minimum-operations-to-make-array-non-decreasing/",
+      "pattern": "Content to be enriched",
+      "trigger": "",
+      "aha": "",
+      "approach": [],
+      "python": "",
+      "time": "",
+      "space": "",
+      "contentStatus": "needs-enrichment"
     }
   ]
 }
