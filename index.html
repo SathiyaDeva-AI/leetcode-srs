@@ -157,6 +157,19 @@ function renderCard(){
   <h2 class="mt-4 text-2xl font-semibold md:text-3xl">${esc(p.title)}</h2>
   <p class="mt-4 text-sm leading-7 text-zinc-400">Try to solve this problem from memory before revealing the answer. Pay attention to the pattern, invariant, edge cases, and complexity.</p>
   <div class="mt-6 grid gap-4 sm:grid-cols-2"><div class="rounded-xl border border-zinc-800 bg-zinc-950 p-4"><div class="text-xs text-zinc-500">Company ranking</div><div class="mt-1 text-lg font-semibold">#${state.deck.problems.find(x=>x.problemId===p.id)?.rank}</div></div><div class="rounded-xl border border-zinc-800 bg-zinc-950 p-4"><div class="text-xs text-zinc-500">Acceptance rate</div><div class="mt-1 text-lg font-semibold">${p.acceptanceRate.toFixed(1)}%</div></div></div>
+  <div class="mt-6 rounded-xl border border-zinc-800 bg-zinc-950 p-4">
+    <div class="text-xs uppercase tracking-wider text-zinc-500">Example</div>
+    <div class="mt-3 grid gap-3 md:grid-cols-2">
+      <div>
+        <div class="text-[11px] text-zinc-600">Input</div>
+        <pre class="code mt-1 whitespace-pre-wrap text-xs leading-6 text-zinc-300">${esc(p.exampleInput||"Example will be added during content enrichment.")}</pre>
+      </div>
+      <div>
+        <div class="text-[11px] text-zinc-600">Output</div>
+        <pre class="code mt-1 whitespace-pre-wrap text-xs leading-6 text-zinc-300">${esc(p.exampleOutput||"See the problem statement for the expected output.")}</pre>
+      </div>
+    </div>
+  </div>
   <div class="mt-6 rounded-xl border border-zinc-800 bg-zinc-950 p-4"><div class="text-xs text-zinc-500">My approach</div><textarea id="myApproach" rows="5" class="mt-2 w-full resize-none bg-transparent text-sm leading-6 outline-none placeholder:text-zinc-700" placeholder="Write your approach before revealing..."></textarea></div>
   <div class="mt-6 flex flex-wrap justify-between gap-2"><a href="${esc(p.url)}" target="_blank" rel="noopener" class="rounded-lg border border-zinc-800 px-4 py-2.5 text-sm text-zinc-400 hover:text-white">Open on LeetCode ↗</a><button id="reveal" class="rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-black">Reveal Answer <span class="ml-2 text-zinc-500">Space</span></button></div>
  </div>`;

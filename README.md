@@ -1,11 +1,16 @@
-# Interview SRS Beta v0.2
+# Interview SRS Beta v0.3
 
-Free, no-login beta for company-specific interview decks.
+All 156 unique problems across the Amazon, Google, and Meta decks now have an initial authored answer:
+- example input/output
+- pattern
+- blueprint trigger
+- aha
+- step-by-step approach
+- Python implementation (or SQL for SQL problems)
+- time/space complexity
+- common mistakes
+- interview trade-off note
 
-- Amazon / Google / Meta curated decks
-- LocalStorage progress
-- Lightweight SRS
-- No account required
-- Canonical problems are shared across decks
+This is an initial answer set for independent validation before public release. Pay special attention to newer problems and exact current LeetCode signatures.
 
-The supplied source list is preserved as company ranking data. Some problems still need authored learning content (pattern, aha, approach, and reference code); those are marked for enrichment rather than invented.
+Google's supplied source list contains 101 entries; this build preserves all 101 rather than silently dropping one.
