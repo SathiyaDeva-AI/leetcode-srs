@@ -1,0 +1,1239 @@
+{
+  "version": 2,
+  "decks": [
+    {
+      "id": "amazon-top-100",
+      "name": "Amazon Interview \u2014 Top 100",
+      "company": "Amazon",
+      "description": "Company-specific curated interview deck. Ranking preserved from the supplied source list.",
+      "version": 1,
+      "sourceCount": 100,
+      "problems": [
+        {
+          "problemId": 1,
+          "rank": 1
+        },
+        {
+          "problemId": 42,
+          "rank": 2
+        },
+        {
+          "problemId": 121,
+          "rank": 3
+        },
+        {
+          "problemId": 3,
+          "rank": 4
+        },
+        {
+          "problemId": 146,
+          "rank": 5
+        },
+        {
+          "problemId": 2,
+          "rank": 6
+        },
+        {
+          "problemId": 200,
+          "rank": 7
+        },
+        {
+          "problemId": 15,
+          "rank": 8
+        },
+        {
+          "problemId": 49,
+          "rank": 9
+        },
+        {
+          "problemId": 4,
+          "rank": 10
+        },
+        {
+          "problemId": 5,
+          "rank": 11
+        },
+        {
+          "problemId": 56,
+          "rank": 12
+        },
+        {
+          "problemId": 207,
+          "rank": 13
+        },
+        {
+          "problemId": 875,
+          "rank": 14
+        },
+        {
+          "problemId": 9,
+          "rank": 15
+        },
+        {
+          "problemId": 994,
+          "rank": 16
+        },
+        {
+          "problemId": 33,
+          "rank": 17
+        },
+        {
+          "problemId": 11,
+          "rank": 18
+        },
+        {
+          "problemId": 23,
+          "rank": 19
+        },
+        {
+          "problemId": 560,
+          "rank": 20
+        },
+        {
+          "problemId": 3413,
+          "rank": 21
+        },
+        {
+          "problemId": 904,
+          "rank": 22
+        },
+        {
+          "problemId": 767,
+          "rank": 23
+        },
+        {
+          "problemId": 128,
+          "rank": 24
+        },
+        {
+          "problemId": 169,
+          "rank": 25
+        },
+        {
+          "problemId": 236,
+          "rank": 26
+        },
+        {
+          "problemId": 17,
+          "rank": 27
+        },
+        {
+          "problemId": 347,
+          "rank": 28
+        },
+        {
+          "problemId": 14,
+          "rank": 29
+        },
+        {
+          "problemId": 53,
+          "rank": 30
+        },
+        {
+          "problemId": 78,
+          "rank": 31
+        },
+        {
+          "problemId": 198,
+          "rank": 32
+        },
+        {
+          "problemId": 138,
+          "rank": 33
+        },
+        {
+          "problemId": 26,
+          "rank": 34
+        },
+        {
+          "problemId": 76,
+          "rank": 35
+        },
+        {
+          "problemId": 20,
+          "rank": 36
+        },
+        {
+          "problemId": 70,
+          "rank": 37
+        },
+        {
+          "problemId": 75,
+          "rank": 38
+        },
+        {
+          "problemId": 239,
+          "rank": 39
+        },
+        {
+          "problemId": 21,
+          "rank": 40
+        },
+        {
+          "problemId": 31,
+          "rank": 41
+        },
+        {
+          "problemId": 18,
+          "rank": 42
+        },
+        {
+          "problemId": 34,
+          "rank": 43
+        },
+        {
+          "problemId": 48,
+          "rank": 44
+        },
+        {
+          "problemId": 424,
+          "rank": 45
+        },
+        {
+          "problemId": 1011,
+          "rank": 46
+        },
+        {
+          "problemId": 1929,
+          "rank": 47
+        },
+        {
+          "problemId": 28,
+          "rank": 48
+        },
+        {
+          "problemId": 55,
+          "rank": 49
+        },
+        {
+          "problemId": 7,
+          "rank": 50
+        },
+        {
+          "problemId": 84,
+          "rank": 51
+        },
+        {
+          "problemId": 88,
+          "rank": 52
+        },
+        {
+          "problemId": 217,
+          "rank": 53
+        },
+        {
+          "problemId": 238,
+          "rank": 54
+        },
+        {
+          "problemId": 735,
+          "rank": 55
+        },
+        {
+          "problemId": 125,
+          "rank": 56
+        },
+        {
+          "problemId": 253,
+          "rank": 57
+        },
+        {
+          "problemId": 22,
+          "rank": 58
+        },
+        {
+          "problemId": 27,
+          "rank": 59
+        },
+        {
+          "problemId": 46,
+          "rank": 60
+        },
+        {
+          "problemId": 62,
+          "rank": 61
+        },
+        {
+          "problemId": 322,
+          "rank": 62
+        },
+        {
+          "problemId": 621,
+          "rank": 63
+        },
+        {
+          "problemId": 16,
+          "rank": 64
+        },
+        {
+          "problemId": 19,
+          "rank": 65
+        },
+        {
+          "problemId": 35,
+          "rank": 66
+        },
+        {
+          "problemId": 234,
+          "rank": 67
+        },
+        {
+          "problemId": 283,
+          "rank": 68
+        },
+        {
+          "problemId": 410,
+          "rank": 69
+        },
+        {
+          "problemId": 127,
+          "rank": 70
+        },
+        {
+          "problemId": 210,
+          "rank": 71
+        },
+        {
+          "problemId": 242,
+          "rank": 72
+        },
+        {
+          "problemId": 295,
+          "rank": 73
+        },
+        {
+          "problemId": 1752,
+          "rank": 74
+        },
+        {
+          "problemId": 3914,
+          "rank": 75
+        },
+        {
+          "problemId": 6,
+          "rank": 76
+        },
+        {
+          "problemId": 41,
+          "rank": 77
+        },
+        {
+          "problemId": 54,
+          "rank": 78
+        },
+        {
+          "problemId": 136,
+          "rank": 79
+        },
+        {
+          "problemId": 167,
+          "rank": 80
+        },
+        {
+          "problemId": 175,
+          "rank": 81
+        },
+        {
+          "problemId": 485,
+          "rank": 82
+        },
+        {
+          "problemId": 496,
+          "rank": 83
+        },
+        {
+          "problemId": 739,
+          "rank": 84
+        },
+        {
+          "problemId": 8,
+          "rank": 85
+        },
+        {
+          "problemId": 79,
+          "rank": 86
+        },
+        {
+          "problemId": 540,
+          "rank": 87
+        },
+        {
+          "problemId": 796,
+          "rank": 88
+        },
+        {
+          "problemId": 977,
+          "rank": 89
+        },
+        {
+          "problemId": 1004,
+          "rank": 90
+        },
+        {
+          "problemId": 67,
+          "rank": 91
+        },
+        {
+          "problemId": 69,
+          "rank": 92
+        },
+        {
+          "problemId": 100,
+          "rank": 93
+        },
+        {
+          "problemId": 124,
+          "rank": 94
+        },
+        {
+          "problemId": 152,
+          "rank": 95
+        },
+        {
+          "problemId": 162,
+          "rank": 96
+        },
+        {
+          "problemId": 199,
+          "rank": 97
+        },
+        {
+          "problemId": 206,
+          "rank": 98
+        },
+        {
+          "problemId": 287,
+          "rank": 99
+        },
+        {
+          "problemId": 349,
+          "rank": 100
+        }
+      ]
+    },
+    {
+      "id": "google-top-100",
+      "name": "Google Interview \u2014 Top 100",
+      "company": "Google",
+      "description": "Company-specific curated interview deck. Ranking preserved from the supplied source list.",
+      "version": 1,
+      "sourceCount": 101,
+      "problems": [
+        {
+          "problemId": 1,
+          "rank": 1
+        },
+        {
+          "problemId": 2,
+          "rank": 2
+        },
+        {
+          "problemId": 9,
+          "rank": 3
+        },
+        {
+          "problemId": 15,
+          "rank": 4
+        },
+        {
+          "problemId": 42,
+          "rank": 5
+        },
+        {
+          "problemId": 3,
+          "rank": 6
+        },
+        {
+          "problemId": 4,
+          "rank": 7
+        },
+        {
+          "problemId": 121,
+          "rank": 8
+        },
+        {
+          "problemId": 1929,
+          "rank": 9
+        },
+        {
+          "problemId": 14,
+          "rank": 10
+        },
+        {
+          "problemId": 128,
+          "rank": 11
+        },
+        {
+          "problemId": 5,
+          "rank": 12
+        },
+        {
+          "problemId": 7,
+          "rank": 13
+        },
+        {
+          "problemId": 11,
+          "rank": 14
+        },
+        {
+          "problemId": 169,
+          "rank": 15
+        },
+        {
+          "problemId": 26,
+          "rank": 16
+        },
+        {
+          "problemId": 20,
+          "rank": 17
+        },
+        {
+          "problemId": 175,
+          "rank": 18
+        },
+        {
+          "problemId": 88,
+          "rank": 19
+        },
+        {
+          "problemId": 560,
+          "rank": 20
+        },
+        {
+          "problemId": 13,
+          "rank": 21
+        },
+        {
+          "problemId": 53,
+          "rank": 22
+        },
+        {
+          "problemId": 200,
+          "rank": 23
+        },
+        {
+          "problemId": 21,
+          "rank": 24
+        },
+        {
+          "problemId": 242,
+          "rank": 25
+        },
+        {
+          "problemId": 56,
+          "rank": 26
+        },
+        {
+          "problemId": 206,
+          "rank": 27
+        },
+        {
+          "problemId": 347,
+          "rank": 28
+        },
+        {
+          "problemId": 875,
+          "rank": 29
+        },
+        {
+          "problemId": 18,
+          "rank": 30
+        },
+        {
+          "problemId": 48,
+          "rank": 31
+        },
+        {
+          "problemId": 49,
+          "rank": 32
+        },
+        {
+          "problemId": 33,
+          "rank": 33
+        },
+        {
+          "problemId": 146,
+          "rank": 34
+        },
+        {
+          "problemId": 22,
+          "rank": 35
+        },
+        {
+          "problemId": 54,
+          "rank": 36
+        },
+        {
+          "problemId": 1757,
+          "rank": 37
+        },
+        {
+          "problemId": 69,
+          "rank": 38
+        },
+        {
+          "problemId": 1768,
+          "rank": 39
+        },
+        {
+          "problemId": 2667,
+          "rank": 40
+        },
+        {
+          "problemId": 189,
+          "rank": 41
+        },
+        {
+          "problemId": 198,
+          "rank": 42
+        },
+        {
+          "problemId": 55,
+          "rank": 43
+        },
+        {
+          "problemId": 70,
+          "rank": 44
+        },
+        {
+          "problemId": 283,
+          "rank": 45
+        },
+        {
+          "problemId": 410,
+          "rank": 46
+        },
+        {
+          "problemId": 17,
+          "rank": 47
+        },
+        {
+          "problemId": 51,
+          "rank": 48
+        },
+        {
+          "problemId": 167,
+          "rank": 49
+        },
+        {
+          "problemId": 202,
+          "rank": 50
+        },
+        {
+          "problemId": 217,
+          "rank": 51
+        },
+        {
+          "problemId": 231,
+          "rank": 52
+        },
+        {
+          "problemId": 349,
+          "rank": 53
+        },
+        {
+          "problemId": 16,
+          "rank": 54
+        },
+        {
+          "problemId": 35,
+          "rank": 55
+        },
+        {
+          "problemId": 50,
+          "rank": 56
+        },
+        {
+          "problemId": 485,
+          "rank": 57
+        },
+        {
+          "problemId": 8,
+          "rank": 58
+        },
+        {
+          "problemId": 27,
+          "rank": 59
+        },
+        {
+          "problemId": 31,
+          "rank": 60
+        },
+        {
+          "problemId": 238,
+          "rank": 61
+        },
+        {
+          "problemId": 239,
+          "rank": 62
+        },
+        {
+          "problemId": 704,
+          "rank": 63
+        },
+        {
+          "problemId": 876,
+          "rank": 64
+        },
+        {
+          "problemId": 39,
+          "rank": 65
+        },
+        {
+          "problemId": 162,
+          "rank": 66
+        },
+        {
+          "problemId": 181,
+          "rank": 67
+        },
+        {
+          "problemId": 268,
+          "rank": 68
+        },
+        {
+          "problemId": 344,
+          "rank": 69
+        },
+        {
+          "problemId": 424,
+          "rank": 70
+        },
+        {
+          "problemId": 496,
+          "rank": 71
+        },
+        {
+          "problemId": 1502,
+          "rank": 72
+        },
+        {
+          "problemId": 41,
+          "rank": 73
+        },
+        {
+          "problemId": 46,
+          "rank": 74
+        },
+        {
+          "problemId": 84,
+          "rank": 75
+        },
+        {
+          "problemId": 102,
+          "rank": 76
+        },
+        {
+          "problemId": 125,
+          "rank": 77
+        },
+        {
+          "problemId": 394,
+          "rank": 78
+        },
+        {
+          "problemId": 503,
+          "rank": 79
+        },
+        {
+          "problemId": 994,
+          "rank": 80
+        },
+        {
+          "problemId": 75,
+          "rank": 81
+        },
+        {
+          "problemId": 100,
+          "rank": 82
+        },
+        {
+          "problemId": 152,
+          "rank": 83
+        },
+        {
+          "problemId": 215,
+          "rank": 84
+        },
+        {
+          "problemId": 253,
+          "rank": 85
+        },
+        {
+          "problemId": 287,
+          "rank": 86
+        },
+        {
+          "problemId": 322,
+          "rank": 87
+        },
+        {
+          "problemId": 739,
+          "rank": 88
+        },
+        {
+          "problemId": 1480,
+          "rank": 89
+        },
+        {
+          "problemId": 34,
+          "rank": 90
+        },
+        {
+          "problemId": 118,
+          "rank": 91
+        },
+        {
+          "problemId": 122,
+          "rank": 92
+        },
+        {
+          "problemId": 204,
+          "rank": 93
+        },
+        {
+          "problemId": 207,
+          "rank": 94
+        },
+        {
+          "problemId": 219,
+          "rank": 95
+        },
+        {
+          "problemId": 540,
+          "rank": 96
+        },
+        {
+          "problemId": 904,
+          "rank": 97
+        },
+        {
+          "problemId": 1944,
+          "rank": 98
+        },
+        {
+          "problemId": 2235,
+          "rank": 99
+        },
+        {
+          "problemId": 6,
+          "rank": 100
+        },
+        {
+          "problemId": 10,
+          "rank": 101
+        }
+      ]
+    },
+    {
+      "id": "meta-top-100",
+      "name": "Meta Interview \u2014 Top 100",
+      "company": "Meta",
+      "description": "Company-specific curated interview deck. Ranking preserved from the supplied source list.",
+      "version": 1,
+      "sourceCount": 100,
+      "problems": [
+        {
+          "problemId": 1,
+          "rank": 1
+        },
+        {
+          "problemId": 121,
+          "rank": 2
+        },
+        {
+          "problemId": 560,
+          "rank": 3
+        },
+        {
+          "problemId": 3,
+          "rank": 4
+        },
+        {
+          "problemId": 4,
+          "rank": 5
+        },
+        {
+          "problemId": 26,
+          "rank": 6
+        },
+        {
+          "problemId": 2,
+          "rank": 7
+        },
+        {
+          "problemId": 20,
+          "rank": 8
+        },
+        {
+          "problemId": 125,
+          "rank": 9
+        },
+        {
+          "problemId": 15,
+          "rank": 10
+        },
+        {
+          "problemId": 408,
+          "rank": 11
+        },
+        {
+          "problemId": 1249,
+          "rank": 12
+        },
+        {
+          "problemId": 31,
+          "rank": 13
+        },
+        {
+          "problemId": 9,
+          "rank": 14
+        },
+        {
+          "problemId": 215,
+          "rank": 15
+        },
+        {
+          "problemId": 5,
+          "rank": 16
+        },
+        {
+          "problemId": 56,
+          "rank": 17
+        },
+        {
+          "problemId": 88,
+          "rank": 18
+        },
+        {
+          "problemId": 1004,
+          "rank": 19
+        },
+        {
+          "problemId": 283,
+          "rank": 20
+        },
+        {
+          "problemId": 11,
+          "rank": 21
+        },
+        {
+          "problemId": 50,
+          "rank": 22
+        },
+        {
+          "problemId": 53,
+          "rank": 23
+        },
+        {
+          "problemId": 209,
+          "rank": 24
+        },
+        {
+          "problemId": 543,
+          "rank": 25
+        },
+        {
+          "problemId": 73,
+          "rank": 26
+        },
+        {
+          "problemId": 162,
+          "rank": 27
+        },
+        {
+          "problemId": 199,
+          "rank": 28
+        },
+        {
+          "problemId": 200,
+          "rank": 29
+        },
+        {
+          "problemId": 322,
+          "rank": 30
+        },
+        {
+          "problemId": 7,
+          "rank": 31
+        },
+        {
+          "problemId": 33,
+          "rank": 32
+        },
+        {
+          "problemId": 49,
+          "rank": 33
+        },
+        {
+          "problemId": 242,
+          "rank": 34
+        },
+        {
+          "problemId": 314,
+          "rank": 35
+        },
+        {
+          "problemId": 528,
+          "rank": 36
+        },
+        {
+          "problemId": 34,
+          "rank": 37
+        },
+        {
+          "problemId": 39,
+          "rank": 38
+        },
+        {
+          "problemId": 128,
+          "rank": 39
+        },
+        {
+          "problemId": 146,
+          "rank": 40
+        },
+        {
+          "problemId": 189,
+          "rank": 41
+        },
+        {
+          "problemId": 339,
+          "rank": 42
+        },
+        {
+          "problemId": 680,
+          "rank": 43
+        },
+        {
+          "problemId": 875,
+          "rank": 44
+        },
+        {
+          "problemId": 1539,
+          "rank": 45
+        },
+        {
+          "problemId": 13,
+          "rank": 46
+        },
+        {
+          "problemId": 16,
+          "rank": 47
+        },
+        {
+          "problemId": 21,
+          "rank": 48
+        },
+        {
+          "problemId": 32,
+          "rank": 49
+        },
+        {
+          "problemId": 35,
+          "rank": 50
+        },
+        {
+          "problemId": 42,
+          "rank": 51
+        },
+        {
+          "problemId": 51,
+          "rank": 52
+        },
+        {
+          "problemId": 55,
+          "rank": 53
+        },
+        {
+          "problemId": 66,
+          "rank": 54
+        },
+        {
+          "problemId": 167,
+          "rank": 55
+        },
+        {
+          "problemId": 169,
+          "rank": 56
+        },
+        {
+          "problemId": 236,
+          "rank": 57
+        },
+        {
+          "problemId": 238,
+          "rank": 58
+        },
+        {
+          "problemId": 349,
+          "rank": 59
+        },
+        {
+          "problemId": 1929,
+          "rank": 60
+        },
+        {
+          "problemId": 14,
+          "rank": 61
+        },
+        {
+          "problemId": 27,
+          "rank": 62
+        },
+        {
+          "problemId": 28,
+          "rank": 63
+        },
+        {
+          "problemId": 129,
+          "rank": 64
+        },
+        {
+          "problemId": 207,
+          "rank": 65
+        },
+        {
+          "problemId": 217,
+          "rank": 66
+        },
+        {
+          "problemId": 231,
+          "rank": 67
+        },
+        {
+          "problemId": 509,
+          "rank": 68
+        },
+        {
+          "problemId": 647,
+          "rank": 69
+        },
+        {
+          "problemId": 1650,
+          "rank": 70
+        },
+        {
+          "problemId": 18,
+          "rank": 71
+        },
+        {
+          "problemId": 22,
+          "rank": 72
+        },
+        {
+          "problemId": 23,
+          "rank": 73
+        },
+        {
+          "problemId": 71,
+          "rank": 74
+        },
+        {
+          "problemId": 76,
+          "rank": 75
+        },
+        {
+          "problemId": 77,
+          "rank": 76
+        },
+        {
+          "problemId": 122,
+          "rank": 77
+        },
+        {
+          "problemId": 136,
+          "rank": 78
+        },
+        {
+          "problemId": 141,
+          "rank": 79
+        },
+        {
+          "problemId": 143,
+          "rank": 80
+        },
+        {
+          "problemId": 347,
+          "rank": 81
+        },
+        {
+          "problemId": 485,
+          "rank": 82
+        },
+        {
+          "problemId": 704,
+          "rank": 83
+        },
+        {
+          "problemId": 938,
+          "rank": 84
+        },
+        {
+          "problemId": 17,
+          "rank": 85
+        },
+        {
+          "problemId": 19,
+          "rank": 86
+        },
+        {
+          "problemId": 48,
+          "rank": 87
+        },
+        {
+          "problemId": 84,
+          "rank": 88
+        },
+        {
+          "problemId": 101,
+          "rank": 89
+        },
+        {
+          "problemId": 108,
+          "rank": 90
+        },
+        {
+          "problemId": 131,
+          "rank": 91
+        },
+        {
+          "problemId": 138,
+          "rank": 92
+        },
+        {
+          "problemId": 175,
+          "rank": 93
+        },
+        {
+          "problemId": 198,
+          "rank": 94
+        },
+        {
+          "problemId": 287,
+          "rank": 95
+        },
+        {
+          "problemId": 343,
+          "rank": 96
+        },
+        {
+          "problemId": 540,
+          "rank": 97
+        },
+        {
+          "problemId": 678,
+          "rank": 98
+        },
+        {
+          "problemId": 827,
+          "rank": 99
+        },
+        {
+          "problemId": 863,
+          "rank": 100
+        }
+      ]
+    }
+  ]
+}

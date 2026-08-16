@@ -1,882 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#09090b" />
-  <title>LeetCode SRS</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            panel: "#111113",
-            panel2: "#18181b"
-          }
-        }
-      }
-    };
-  </script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <style>
-    html { background:#09090b; }
-    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    .card-enter { animation: cardIn .18s ease-out; }
-    @keyframes cardIn { from { opacity:0; transform:translateY(6px) } to { opacity:1; transform:none } }
-    .code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-    .toast { animation: toastIn .2s ease-out; }
-    @keyframes toastIn { from { opacity:0; transform:translateY(-8px) } to { opacity:1; transform:none } }
-    .scrollbar::-webkit-scrollbar { width:8px; height:8px; }
-    .scrollbar::-webkit-scrollbar-thumb { background:#3f3f46; border-radius:999px; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#09090b">
+<title>Interview SRS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+html,body{background:#09090b}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+.card-in{animation:in .18s ease-out}@keyframes in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+</style>
 </head>
+<body class="min-h-screen bg-zinc-950 text-zinc-100">
+<div id="toast" class="fixed right-3 top-3 z-50 space-y-2"></div>
 
-<body class="dark bg-zinc-950 text-zinc-100 min-h-screen">
-  <div id="toastRoot" class="fixed right-4 top-4 z-[100] space-y-2"></div>
-
-  <header class="sticky top-0 z-40 border-b border-zinc-800/80 bg-zinc-950/90 backdrop-blur">
-    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
-      <div class="flex items-center gap-3">
-        <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-black font-bold">LC</div>
-        <div>
-          <div class="font-semibold tracking-tight">LeetCode SRS</div>
-          <div class="text-xs text-zinc-500">Recall. Review. Master.</div>
-        </div>
-      </div>
-
-      <div class="flex items-center gap-2">
-        <div id="syncBadge" class="hidden sm:block rounded-full border border-zinc-800 bg-zinc-900 px-3 py-1 text-xs text-zinc-400">Local Mode</div>
-        <button id="settingsBtn" class="rounded-lg border border-zinc-800 p-2 text-zinc-400 hover:bg-zinc-900 hover:text-white" title="Settings">
-          <i data-lucide="settings" class="h-4 w-4"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main class="mx-auto max-w-7xl px-4 py-6">
-    <section id="dashboardView">
-      <div class="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-        <div>
-          <div class="mb-1 text-sm text-zinc-500">Your study dashboard</div>
-          <h1 class="text-2xl font-semibold tracking-tight md:text-3xl">Master LeetCode</h1>
-        </div>
-        <button id="startReviewBtn" class="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-black hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-40">
-          <i data-lucide="play" class="h-4 w-4"></i>
-          Start Today's Review
-        </button>
-      </div>
-
-      <div id="stats" class="mb-6 grid grid-cols-2 gap-3 md:grid-cols-4"></div>
-
-      <div class="mb-6 rounded-xl border border-zinc-800 bg-zinc-900/40 p-4">
-        <div class="grid gap-3 md:grid-cols-[1fr_180px_150px_auto]">
-          <div class="relative">
-            <i data-lucide="search" class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500"></i>
-            <input id="searchInput" class="w-full rounded-lg border border-zinc-800 bg-zinc-950 py-2.5 pl-9 pr-3 text-sm outline-none ring-0 placeholder:text-zinc-600 focus:border-zinc-600" placeholder="Search title or ID..." />
-          </div>
-          <select id="patternFilter" class="rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2.5 text-sm outline-none focus:border-zinc-600"></select>
-          <select id="difficultyFilter" class="rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2.5 text-sm outline-none focus:border-zinc-600">
-            <option value="">All difficulties</option>
-            <option>Easy</option>
-            <option>Medium</option>
-            <option>Hard</option>
-          </select>
-          <label class="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-sm text-zinc-300">
-            <input id="dueOnly" type="checkbox" class="accent-white" />
-            Due today
-          </label>
-        </div>
-      </div>
-
-      <div class="mb-3 flex items-center justify-between">
-        <h2 class="font-semibold">Problem Library</h2>
-        <span id="libraryCount" class="text-xs text-zinc-500"></span>
-      </div>
-      <div id="problemGrid" class="grid gap-3 md:grid-cols-2 lg:grid-cols-3"></div>
-    </section>
-
-    <section id="reviewView" class="hidden">
-      <div class="mb-5 flex items-center justify-between">
-        <div>
-          <div id="reviewProgress" class="text-xs text-zinc-500"></div>
-          <h1 class="mt-1 text-xl font-semibold">Review Session</h1>
-        </div>
-        <button id="exitReviewBtn" class="rounded-lg border border-zinc-800 px-3 py-2 text-sm text-zinc-400 hover:bg-zinc-900 hover:text-white">Exit</button>
-      </div>
-
-      <div id="reviewCard" class="card-enter"></div>
-    </section>
-  </main>
-
-  <!-- Settings Modal -->
-  <div id="settingsModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
-    <div class="w-full max-w-lg rounded-2xl border border-zinc-800 bg-zinc-950 shadow-2xl">
-      <div class="flex items-center justify-between border-b border-zinc-800 px-5 py-4">
-        <div>
-          <h2 class="font-semibold">Cloud Sync</h2>
-          <p class="text-xs text-zinc-500">Optional GitHub Gist persistence</p>
-        </div>
-        <button id="closeSettingsBtn" class="rounded-lg p-2 text-zinc-500 hover:bg-zinc-900 hover:text-white">
-          <i data-lucide="x" class="h-4 w-4"></i>
-        </button>
-      </div>
-
-      <div class="space-y-4 p-5">
-        <div class="rounded-lg border border-amber-900/50 bg-amber-950/20 p-3 text-xs leading-5 text-amber-200">
-          Personal v1: a GitHub token is stored in this browser. For a commercial release, move authentication and paid deck access behind a server-side API.
-        </div>
-
-        <label class="block">
-          <span class="mb-1.5 block text-sm text-zinc-300">GitHub Personal Access Token</span>
-          <input id="githubToken" type="password" autocomplete="off" class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-2.5 text-sm outline-none focus:border-zinc-600" placeholder="github_pat_..." />
-        </label>
-
-        <label class="block">
-          <span class="mb-1.5 block text-sm text-zinc-300">Private Gist ID</span>
-          <input id="gistId" autocomplete="off" class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-2.5 text-sm outline-none focus:border-zinc-600" placeholder="e.g. a1b2c3d4..." />
-        </label>
-
-        <div class="rounded-lg border border-zinc-800 bg-zinc-900/60 p-3 text-xs leading-5 text-zinc-400">
-          <div class="font-medium text-zinc-200">Setup</div>
-          <ol class="mt-1 list-decimal space-y-1 pl-4">
-            <li>Create a private GitHub Gist containing a file named <code class="code text-zinc-200">progress.json</code>.</li>
-            <li>Create a GitHub token with the minimum Gist permission required.</li>
-            <li>Paste both values above and test the connection.</li>
-          </ol>
-        </div>
-
-        <div class="flex gap-2">
-          <button id="testSyncBtn" class="flex-1 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-black hover:bg-zinc-200">Test Connection & Sync</button>
-          <button id="clearCloudBtn" class="rounded-lg border border-zinc-800 px-4 py-2.5 text-sm text-zinc-300 hover:bg-zinc-900">Clear</button>
-        </div>
-
-        <div id="syncMessage" class="hidden rounded-lg border border-zinc-800 bg-zinc-900 p-3 text-sm"></div>
-      </div>
+<header class="sticky top-0 z-40 border-b border-zinc-800/80 bg-zinc-950/90 backdrop-blur">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+    <button id="homeBtn" class="flex items-center gap-3 text-left">
+      <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-white font-bold text-black">IS</div>
+      <div><div class="font-semibold">Interview SRS</div><div class="text-xs text-zinc-500">Recall what matters</div></div>
+    </button>
+    <div class="flex items-center gap-2">
+      <span id="modeBadge" class="hidden rounded-full border border-zinc-800 bg-zinc-900 px-3 py-1 text-xs text-zinc-400 sm:block">Local progress</span>
+      <button id="settingsBtn" class="rounded-lg border border-zinc-800 p-2 text-zinc-400 hover:bg-zinc-900 hover:text-white" aria-label="Settings">
+        <i data-lucide="settings" class="h-4 w-4"></i>
+      </button>
     </div>
   </div>
-
-  <script>
-    const CONFIG = {
-      problemsUrl: "./problems.json",
-      progressKey: "leetcode-srs-progress-v1",
-      settingsKey: "leetcode-srs-settings-v1",
-      reviewHistoryLimit: 100,
-      masteryIntervalDays: 30,
-      defaultNewPerDay: 2,
-      defaultMaxReviews: 20
-    };
-
-    const state = {
-      problems: [],
-      decks: [],
-      progress: {},
-      filters: { search: "", pattern: "", difficulty: "", dueOnly: false },
-      currentDeckId: "master-leetcode",
-      reviewQueue: [],
-      reviewIndex: 0,
-      revealed: false,
-      myApproach: "",
-      sync: { mode: "local", status: "local", message: "" },
-      settings: { newPerDay: CONFIG.defaultNewPerDay, maxReviews: CONFIG.defaultMaxReviews }
-    };
-
-    const $ = (id) => document.getElementById(id);
-    const todayKey = () => new Date().toISOString().slice(0, 10);
-    const nowIso = () => new Date().toISOString();
-    const addDays = (dateString, days) => {
-      const d = new Date(dateString + "T00:00:00");
-      d.setDate(d.getDate() + days);
-      return d.toISOString().slice(0, 10);
-    };
-    const daysBetween = (a, b) => Math.max(0, Math.round((new Date(b + "T00:00:00") - new Date(a + "T00:00:00")) / 86400000));
-    const escapeHtml = (value = "") => String(value).replace(/[&<>"']/g, ch => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;" }[ch]));
-    const escapeAttr = escapeHtml;
-
-    function showToast(message, type = "info") {
-      const el = document.createElement("div");
-      const cls = type === "success"
-        ? "border-emerald-800 bg-emerald-950/95 text-emerald-200"
-        : type === "error"
-        ? "border-red-800 bg-red-950/95 text-red-200"
-        : "border-zinc-700 bg-zinc-900/95 text-zinc-200";
-      el.className = `toast rounded-lg border px-4 py-3 text-sm shadow-xl ${cls}`;
-      el.textContent = message;
-      $("toastRoot").appendChild(el);
-      setTimeout(() => el.remove(), 3200);
-    }
-
-    function setSyncBadge(label, tone = "local") {
-      const badge = $("syncBadge");
-      badge.textContent = label;
-      badge.className = "rounded-full border px-3 py-1 text-xs " + (
-        tone === "success" ? "border-emerald-800 bg-emerald-950/40 text-emerald-300" :
-        tone === "error" ? "border-red-800 bg-red-950/40 text-red-300" :
-        "border-zinc-800 bg-zinc-900 text-zinc-400"
-      );
-    }
-
-    function loadLocalProgress() {
-      try {
-        return JSON.parse(localStorage.getItem(CONFIG.progressKey) || "{}");
-      } catch {
-        return {};
-      }
-    }
-
-    function saveLocalProgress() {
-      localStorage.setItem(CONFIG.progressKey, JSON.stringify(state.progress));
-    }
-
-    function loadSettings() {
-      try {
-        const saved = JSON.parse(localStorage.getItem(CONFIG.settingsKey) || "{}");
-        state.settings = { ...state.settings, ...saved };
-      } catch {}
-    }
-
-    function saveSettings() {
-      localStorage.setItem(CONFIG.settingsKey, JSON.stringify(state.settings));
-    }
-
-    function blankProgress(problemId) {
-      return {
-        problemId,
-        status: "new",
-        dueDate: todayKey(),
-        interval: 0,
-        easeFactor: 2.5,
-        repetitions: 0,
-        lapses: 0,
-        lastRating: null,
-        lastReviewedAt: null,
-        createdAt: nowIso(),
-        updatedAt: nowIso(),
-        reviewHistory: []
-      };
-    }
-
-    function getProgress(problemId) {
-      if (!state.progress[problemId]) state.progress[problemId] = blankProgress(problemId);
-      return state.progress[problemId];
-    }
-
-    function normalizeProgress() {
-      for (const p of state.problems) getProgress(p.id);
-    }
-
-    function isDue(p) {
-      const s = getProgress(p.id);
-      return s.status === "new" || s.dueDate <= todayKey();
-    }
-
-    function isMastered(p) {
-      return getProgress(p.id).status === "mastered";
-    }
-
-    function getDeckProblems(deck) {
-      if (!deck) return state.problems;
-      if (deck.type === "static" || deck.type === "roadmap") {
-        const ids = new Set(deck.problemIds || []);
-        return (deck.problemIds || []).map(id => state.problems.find(p => p.id === id)).filter(Boolean);
-      }
-      if (deck.type === "dynamic") {
-        return state.problems.filter(p => {
-          const f = deck.filter || {};
-          if (f.pattern && p.pattern !== f.pattern) return false;
-          if (f.difficulty && p.difficulty !== f.difficulty) return false;
-          return true;
-        });
-      }
-      return state.problems;
-    }
-
-    function getCurrentDeck() {
-      return state.decks.find(d => d.id === state.currentDeckId) || state.decks[0];
-    }
-
-    function calculateNextState(progress, rating) {
-      const s = structuredClone(progress);
-      const today = todayKey();
-      const previousInterval = Math.max(0, s.interval || 0);
-      let interval = previousInterval;
-      let ease = Number(s.easeFactor || 2.5);
-      let status = s.status;
-
-      if (rating === "again") {
-        s.lapses += 1;
-        s.repetitions = 0;
-        ease = Math.max(1.3, ease - 0.20);
-        interval = 1;
-        status = "learning";
-      } else if (rating === "hard") {
-        s.repetitions += 1;
-        ease = Math.max(1.3, ease - 0.05);
-        interval = Math.max(1, Math.round((previousInterval || 1) * Math.max(1.2, ease * 0.75)));
-        status = "review";
-      } else if (rating === "good") {
-        s.repetitions += 1;
-        interval = previousInterval === 0 ? 3 : Math.max(3, Math.round(previousInterval * ease));
-        status = "review";
-      } else if (rating === "easy") {
-        s.repetitions += 1;
-        ease = Math.min(3.2, ease + 0.15);
-        interval = previousInterval === 0 ? 7 : Math.max(7, Math.round(previousInterval * ease * 1.3));
-        status = "review";
-      }
-
-      if (interval >= CONFIG.masteryIntervalDays && s.repetitions >= 3 && rating !== "again") {
-        status = "mastered";
-      }
-
-      s.interval = interval;
-      s.easeFactor = Number(ease.toFixed(2));
-      s.status = status;
-      s.lastRating = rating;
-      s.lastReviewedAt = nowIso();
-      s.updatedAt = nowIso();
-      s.dueDate = addDays(today, interval);
-      s.reviewHistory = [
-        ...(s.reviewHistory || []),
-        { rating, reviewedAt: s.lastReviewedAt, previousInterval }
-      ].slice(-CONFIG.reviewHistoryLimit);
-
-      return s;
-    }
-
-    function buildReviewQueue(deck) {
-      const candidates = getDeckProblems(deck);
-      const due = candidates.filter(p => {
-        const s = getProgress(p.id);
-        return s.status !== "new" && s.dueDate <= todayKey();
-      });
-      const learning = candidates.filter(p => {
-        const s = getProgress(p.id);
-        return s.status === "learning" && s.dueDate <= todayKey();
-      });
-      const fresh = candidates.filter(p => getProgress(p.id).status === "new");
-
-      const seen = new Set();
-      const queue = [];
-
-      const add = (items) => {
-        for (const p of items) {
-          if (!seen.has(p.id)) {
-            seen.add(p.id);
-            queue.push(p);
-          }
-        }
-      };
-
-      add(due.filter(p => getProgress(p.id).status !== "learning"));
-      add(learning);
-      add(fresh.slice(0, Number(deck?.dailyNewLimit || state.settings.newPerDay)));
-
-      return queue.slice(0, Number(state.settings.maxReviews) + Number(state.settings.newPerDay));
-    }
-
-    function getStats() {
-      const deckProblems = getDeckProblems(getCurrentDeck());
-      let due = 0, learning = 0, mastered = 0, fresh = 0;
-      for (const p of deckProblems) {
-        const s = getProgress(p.id);
-        if (s.status === "mastered") mastered++;
-        else if (s.status === "new") { fresh++; if (s.dueDate <= todayKey()) due++; }
-        else if (s.status === "learning") { learning++; if (s.dueDate <= todayKey()) due++; }
-        else if (s.dueDate <= todayKey()) due++;
-      }
-      return { due, learning, mastered, fresh, total: deckProblems.length };
-    }
-
-    function difficultyClass(d) {
-      return d === "Easy" ? "border-emerald-800 bg-emerald-950/40 text-emerald-300"
-        : d === "Medium" ? "border-amber-800 bg-amber-950/40 text-amber-300"
-        : "border-red-800 bg-red-950/40 text-red-300";
-    }
-
-    function statusLabel(s) {
-      return s === "new" ? "New" : s === "learning" ? "Learning" : s === "mastered" ? "Mastered" : "Review";
-    }
-
-    function renderStats() {
-      const s = getStats();
-      $("stats").innerHTML = [
-        ["Due Today", s.due, "calendar-clock"],
-        ["Learning", s.learning, "brain"],
-        ["New", s.fresh, "sparkles"],
-        ["Mastered", s.mastered, "badge-check"]
-      ].map(([label, value, icon]) => `
-        <div class="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4">
-          <div class="flex items-center justify-between text-xs text-zinc-500">
-            <span>${label}</span><i data-lucide="${icon}" class="h-4 w-4"></i>
-          </div>
-          <div class="mt-2 text-2xl font-semibold">${value}</div>
-        </div>
-      `).join("");
-      lucide.createIcons();
-    }
-
-    function renderPatternFilter() {
-      const patterns = [...new Set(state.problems.map(p => p.pattern))].sort();
-      $("patternFilter").innerHTML = `<option value="">All patterns</option>` +
-        patterns.map(p => `<option value="${escapeAttr(p)}">${escapeHtml(p)}</option>`).join("");
-      $("patternFilter").value = state.filters.pattern;
-    }
-
-    function filteredProblems() {
-      const deckProblems = getDeckProblems(getCurrentDeck());
-      const q = state.filters.search.toLowerCase().trim();
-      return deckProblems.filter(p => {
-        if (q && !String(p.id).includes(q) && !p.title.toLowerCase().includes(q)) return false;
-        if (state.filters.pattern && p.pattern !== state.filters.pattern) return false;
-        if (state.filters.difficulty && p.difficulty !== state.filters.difficulty) return false;
-        if (state.filters.dueOnly && !isDue(p)) return false;
-        return true;
-      });
-    }
-
-    function renderProblemGrid() {
-      const list = filteredProblems();
-      $("libraryCount").textContent = `${list.length} of ${getDeckProblems(getCurrentDeck()).length}`;
-      $("problemGrid").innerHTML = list.map(p => {
-        const s = getProgress(p.id);
-        const due = isDue(p);
-        return `
-          <button data-open-problem="${p.id}" class="text-left rounded-xl border border-zinc-800 bg-zinc-900/30 p-4 transition hover:border-zinc-700 hover:bg-zinc-900/70">
-            <div class="flex items-start justify-between gap-3">
-              <div class="min-w-0">
-                <div class="text-xs text-zinc-500">#${p.id}</div>
-                <div class="mt-1 truncate font-medium">${escapeHtml(p.title)}</div>
-              </div>
-              <span class="shrink-0 rounded-full border px-2 py-0.5 text-[11px] ${difficultyClass(p.difficulty)}">${escapeHtml(p.difficulty)}</span>
-            </div>
-            <div class="mt-3 flex flex-wrap gap-1.5">
-              <span class="rounded-full border border-zinc-800 bg-zinc-950 px-2 py-0.5 text-[11px] text-zinc-400">${escapeHtml(p.pattern)}</span>
-              <span class="rounded-full border border-zinc-800 bg-zinc-950 px-2 py-0.5 text-[11px] ${s.status === "mastered" ? "text-emerald-300" : due ? "text-amber-300" : "text-zinc-500"}">${statusLabel(s.status)}${due ? " · Due" : ""}</span>
-            </div>
-            <div class="mt-3 line-clamp-2 text-xs leading-5 text-zinc-500">${escapeHtml(p.description)}</div>
-          </button>
-        `;
-      }).join("") || `<div class="col-span-full rounded-xl border border-dashed border-zinc-800 p-8 text-center text-sm text-zinc-500">No problems match your filters.</div>`;
-
-      document.querySelectorAll("[data-open-problem]").forEach(btn => {
-        btn.addEventListener("click", () => startReview([Number(btn.dataset.openProblem)]));
-      });
-    }
-
-    function renderDashboard() {
-      renderStats();
-      renderPatternFilter();
-      renderProblemGrid();
-    }
-
-    function startReview(problemIds = null) {
-      const deck = getCurrentDeck();
-      const queue = problemIds
-        ? problemIds.map(id => state.problems.find(p => p.id === id)).filter(Boolean)
-        : buildReviewQueue(deck);
-
-      if (!queue.length) {
-        showToast("Nothing is due right now. Add new problems or come back later.", "info");
-        return;
-      }
-
-      state.reviewQueue = queue;
-      state.reviewIndex = 0;
-      state.revealed = false;
-      state.myApproach = "";
-      $("dashboardView").classList.add("hidden");
-      $("reviewView").classList.remove("hidden");
-      renderReviewCard();
-    }
-
-    function currentProblem() {
-      return state.reviewQueue[state.reviewIndex];
-    }
-
-    function renderReviewCard() {
-      const p = currentProblem();
-      if (!p) return finishReview();
-
-      const s = getProgress(p.id);
-      $("reviewProgress").textContent = `${state.reviewIndex + 1} of ${state.reviewQueue.length} · ${statusLabel(s.status)} · Due ${s.dueDate}`;
-      const front = `
-        <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 md:p-8">
-          <div class="mb-5 flex flex-wrap items-center gap-2">
-            <span class="text-xs text-zinc-500">#${p.id}</span>
-            <span class="rounded-full border px-2 py-0.5 text-[11px] ${difficultyClass(p.difficulty)}">${escapeHtml(p.difficulty)}</span>
-            <span class="rounded-full border border-zinc-800 bg-zinc-950 px-2 py-0.5 text-[11px] text-zinc-400">${escapeHtml(p.pattern)}</span>
-          </div>
-          <h2 class="text-2xl font-semibold tracking-tight md:text-3xl">${escapeHtml(p.title)}</h2>
-          <p class="mt-5 max-w-3xl text-sm leading-7 text-zinc-300">${escapeHtml(p.description)}</p>
-
-          <div class="mt-6 grid gap-4 md:grid-cols-2">
-            ${p.examples.map((e, i) => `
-              <div class="rounded-xl border border-zinc-800 bg-zinc-950 p-4">
-                <div class="mb-2 text-xs font-medium text-zinc-500">Example ${i + 1}</div>
-                <div class="code whitespace-pre-wrap text-xs leading-6 text-zinc-300">Input: ${escapeHtml(e.input)}\nOutput: ${escapeHtml(e.output)}</div>
-              </div>
-            `).join("")}
-          </div>
-
-          <div class="mt-6 rounded-xl border border-zinc-800 bg-zinc-950 p-4">
-            <div class="mb-2 text-xs font-medium text-zinc-500">My Approach <span class="font-normal">(optional)</span></div>
-            <textarea id="myApproach" rows="4" class="w-full resize-none bg-transparent text-sm leading-6 outline-none placeholder:text-zinc-700" placeholder="Before revealing the answer, write the approach you think will work...">${escapeHtml(state.myApproach)}</textarea>
-          </div>
-
-          <div class="mt-6 flex justify-end">
-            <button id="revealBtn" class="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-black hover:bg-zinc-200">
-              <i data-lucide="eye" class="h-4 w-4"></i> Reveal Answer <span class="text-zinc-500">Space</span>
-            </button>
-          </div>
-        </div>
-      `;
-
-      const back = `
-        <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 md:p-8">
-          <div class="mb-5 flex flex-wrap items-center gap-2">
-            <span class="text-xs text-zinc-500">#${p.id}</span>
-            <span class="rounded-full border px-2 py-0.5 text-[11px] ${difficultyClass(p.difficulty)}">${escapeHtml(p.difficulty)}</span>
-            <span class="rounded-full border border-zinc-800 bg-zinc-950 px-2 py-0.5 text-[11px] text-zinc-400">${escapeHtml(p.pattern)}</span>
-          </div>
-          <h2 class="text-2xl font-semibold">${escapeHtml(p.title)}</h2>
-
-          <div class="mt-6 grid gap-4 md:grid-cols-2">
-            <div class="rounded-xl border border-zinc-800 bg-zinc-950 p-4">
-              <div class="text-xs font-medium uppercase tracking-wider text-zinc-500">Blueprint Trigger</div>
-              <p class="mt-2 text-sm leading-6 text-zinc-200">${escapeHtml(p.trigger)}</p>
-            </div>
-            <div class="rounded-xl border border-zinc-800 bg-zinc-950 p-4">
-              <div class="text-xs font-medium uppercase tracking-wider text-zinc-500">Aha!</div>
-              <p class="mt-2 text-sm leading-6 text-zinc-200">${escapeHtml(p.aha)}</p>
-            </div>
-          </div>
-
-          <div class="mt-4 rounded-xl border border-zinc-800 bg-zinc-950 p-4">
-            <div class="text-xs font-medium uppercase tracking-wider text-zinc-500">Step-by-Step Approach</div>
-            <ol class="mt-3 space-y-2 text-sm leading-6 text-zinc-300">
-              ${p.approach.map(step => `<li class="flex gap-3"><span class="text-zinc-600">•</span><span>${escapeHtml(step)}</span></li>`).join("")}
-            </ol>
-          </div>
-
-          <div class="mt-4 rounded-xl border border-zinc-800 bg-zinc-950 p-4">
-            <div class="mb-2 flex items-center justify-between">
-              <div class="text-xs font-medium uppercase tracking-wider text-zinc-500">Python</div>
-              <button id="copyCodeBtn" class="rounded-md border border-zinc-800 px-2 py-1 text-[11px] text-zinc-400 hover:text-white">Copy</button>
-            </div>
-            <pre id="codeBlock" class="code scrollbar max-h-[420px] overflow-auto whitespace-pre-wrap text-xs leading-6 text-zinc-300">${escapeHtml(p.solutions.python)}</pre>
-          </div>
-
-          <div class="mt-4 grid gap-4 md:grid-cols-2">
-            <div class="rounded-xl border border-zinc-800 bg-zinc-950 p-4">
-              <div class="text-xs text-zinc-500">Complexity</div>
-              <div class="mt-2 flex gap-2">
-                <span class="rounded-full border border-zinc-800 px-2.5 py-1 text-xs text-zinc-300">Time ${escapeHtml(p.timeComplexity)}</span>
-                <span class="rounded-full border border-zinc-800 px-2.5 py-1 text-xs text-zinc-300">Space ${escapeHtml(p.spaceComplexity)}</span>
-              </div>
-            </div>
-            <div class="rounded-xl border border-zinc-800 bg-zinc-950 p-4">
-              <div class="text-xs text-zinc-500">Staff-Level Insight</div>
-              <p class="mt-2 text-sm leading-6 text-zinc-300">${escapeHtml(p.staffInsights?.[0] || p.tradeoffs || "")}</p>
-            </div>
-          </div>
-
-          <div class="mt-4 rounded-xl border border-zinc-800 bg-zinc-950 p-4">
-            <div class="text-xs font-medium uppercase tracking-wider text-zinc-500">Common Mistakes</div>
-            <ul class="mt-3 space-y-1 text-sm text-zinc-300">${(p.commonMistakes || []).map(x => `<li>• ${escapeHtml(x)}</li>`).join("")}</ul>
-          </div>
-
-          <div class="mt-7">
-            <div class="mb-3 text-center text-xs text-zinc-500">How well did you recall it?</div>
-            <div class="grid grid-cols-4 gap-2">
-              ${[
-                ["again","Again","1 day","border-red-900/70 hover:bg-red-950/30"],
-                ["hard","Hard","short","border-amber-900/70 hover:bg-amber-950/30"],
-                ["good","Good","normal","border-emerald-900/70 hover:bg-emerald-950/30"],
-                ["easy","Easy","long","border-sky-900/70 hover:bg-sky-950/30"]
-              ].map(([r,label,sub,cls]) => `
-                <button data-rate="${r}" class="rounded-xl border ${cls} px-2 py-3 text-center transition">
-                  <div class="text-sm font-semibold">${label}</div>
-                  <div class="mt-1 text-[10px] text-zinc-500">${sub}</div>
-                </button>
-              `).join("")}
-            </div>
-            <div class="mt-2 grid grid-cols-4 text-center text-[10px] text-zinc-600"><span>1</span><span>2</span><span>3</span><span>4</span></div>
-          </div>
-        </div>
-      `;
-
-      $("reviewCard").innerHTML = state.revealed ? back : front;
-      lucide.createIcons();
-
-      if (!state.revealed) {
-        $("revealBtn").addEventListener("click", revealAnswer);
-        $("myApproach").addEventListener("input", e => state.myApproach = e.target.value);
-      } else {
-        document.querySelectorAll("[data-rate]").forEach(btn => btn.addEventListener("click", () => rateCurrent(btn.dataset.rate)));
-        $("copyCodeBtn").addEventListener("click", async () => {
-          try {
-            await navigator.clipboard.writeText(p.solutions.python);
-            showToast("Code copied", "success");
-          } catch { showToast("Clipboard access unavailable", "error"); }
-        });
-      }
-    }
-
-    function revealAnswer() {
-      state.revealed = true;
-      renderReviewCard();
-    }
-
-    async function rateCurrent(rating) {
-      const p = currentProblem();
-      const old = getProgress(p.id);
-      state.progress[p.id] = calculateNextState(old, rating);
-      saveLocalProgress();
-      renderStats();
-      renderProblemGrid();
-
-      state.reviewIndex++;
-      state.revealed = false;
-      state.myApproach = "";
-      renderReviewCard();
-      syncInBackground();
-    }
-
-    function finishReview() {
-      $("reviewCard").innerHTML = `
-        <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-10 text-center">
-          <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-emerald-800 bg-emerald-950/40 text-emerald-300">
-            <i data-lucide="check" class="h-6 w-6"></i>
-          </div>
-          <h2 class="mt-5 text-2xl font-semibold">Review complete</h2>
-          <p class="mx-auto mt-2 max-w-md text-sm leading-6 text-zinc-500">Your ratings are saved. Keep the streak going and let the SRS schedule decide when these problems return.</p>
-          <button id="backDashboardBtn" class="mt-6 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-black">Back to Dashboard</button>
-        </div>
-      `;
-      $("reviewProgress").textContent = `${state.reviewQueue.length} reviewed`;
-      lucide.createIcons();
-      $("backDashboardBtn").addEventListener("click", exitReview);
-    }
-
-    function exitReview() {
-      $("reviewView").classList.add("hidden");
-      $("dashboardView").classList.remove("hidden");
-      renderDashboard();
-    }
-
-    function openSettings() {
-      const saved = JSON.parse(localStorage.getItem(CONFIG.settingsKey) || "{}");
-      $("githubToken").value = saved.githubToken || "";
-      $("gistId").value = saved.gistId || "";
-      $("syncMessage").classList.add("hidden");
-      $("settingsModal").classList.remove("hidden");
-      $("settingsModal").classList.add("flex");
-    }
-
-    function closeSettings() {
-      $("settingsModal").classList.add("hidden");
-      $("settingsModal").classList.remove("flex");
-    }
-
-    function getCloudSettings() {
-      try { return JSON.parse(localStorage.getItem(CONFIG.settingsKey) || "{}"); }
-      catch { return {}; }
-    }
-
-    function saveCloudSettings(token, gistId) {
-      const current = getCloudSettings();
-      localStorage.setItem(CONFIG.settingsKey, JSON.stringify({ ...current, githubToken: token, gistId }));
-    }
-
-    async function githubRequest(url, options = {}) {
-      const settings = getCloudSettings();
-      if (!settings.githubToken) throw new Error("GitHub token is not configured.");
-      const headers = {
-        "Accept": "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28",
-        "Authorization": `Bearer ${settings.githubToken}`,
-        ...(options.body ? { "Content-Type": "application/json" } : {})
-      };
-      const res = await fetch(url, { ...options, headers: { ...headers, ...(options.headers || {}) } });
-      if (!res.ok) {
-        const body = await res.text();
-        throw new Error(`GitHub API ${res.status}: ${body.slice(0, 180)}`);
-      }
-      return res.json();
-    }
-
-    async function pullGist() {
-      const settings = getCloudSettings();
-      if (!settings.githubToken || !settings.gistId) throw new Error("GitHub token and Gist ID are required.");
-      const data = await githubRequest(`https://api.github.com/gists/${encodeURIComponent(settings.gistId)}`);
-      const file = data.files?.["progress.json"];
-      if (!file?.content) throw new Error("The Gist does not contain progress.json.");
-      return JSON.parse(file.content);
-    }
-
-    function mergeProgress(local, cloud) {
-      const merged = { ...local };
-      const cloudProgress = cloud?.progress || {};
-      for (const [id, remote] of Object.entries(cloudProgress)) {
-        const localItem = merged[id];
-        if (!localItem || new Date(remote.updatedAt || 0) >= new Date(localItem.updatedAt || 0)) {
-          merged[id] = remote;
-        }
-      }
-      return merged;
-    }
-
-    async function pushGist() {
-      const settings = getCloudSettings();
-      if (!settings.githubToken || !settings.gistId) return;
-      const content = JSON.stringify({
-        version: 1,
-        updatedAt: nowIso(),
-        progress: state.progress
-      }, null, 2);
-
-      await githubRequest(`https://api.github.com/gists/${encodeURIComponent(settings.gistId)}`, {
-        method: "PATCH",
-        body: JSON.stringify({ files: { "progress.json": { content } } })
-      });
-    }
-
-    async function testAndSync() {
-      const token = $("githubToken").value.trim();
-      const gistId = $("gistId").value.trim();
-      if (!token || !gistId) {
-        showSyncMessage("Enter both the GitHub token and Gist ID.", true);
-        return;
-      }
-
-      saveCloudSettings(token, gistId);
-      $("testSyncBtn").disabled = true;
-      $("testSyncBtn").textContent = "Syncing...";
-
-      try {
-        const cloud = await pullGist();
-        state.progress = mergeProgress(state.progress, cloud);
-        normalizeProgress();
-        saveLocalProgress();
-        await pushGist();
-        state.sync.mode = "gist";
-        setSyncBadge("Synced with GitHub", "success");
-        showSyncMessage("Connection successful. Local and cloud progress were merged and the merged state was uploaded.", false);
-        showToast("Synced with GitHub", "success");
-        renderDashboard();
-      } catch (err) {
-        setSyncBadge("Local Mode", "error");
-        showSyncMessage(err.message, true);
-        showToast("GitHub sync failed; local progress is safe.", "error");
-      } finally {
-        $("testSyncBtn").disabled = false;
-        $("testSyncBtn").textContent = "Test Connection & Sync";
-      }
-    }
-
-    async function syncInBackground() {
-      const settings = getCloudSettings();
-      if (!settings.githubToken || !settings.gistId) {
-        setSyncBadge("Local Mode", "local");
-        return;
-      }
-
-      try {
-        const cloud = await pullGist();
-        state.progress = mergeProgress(state.progress, cloud);
-        normalizeProgress();
-        saveLocalProgress();
-        await pushGist();
-        setSyncBadge("Synced with GitHub", "success");
-      } catch {
-        setSyncBadge("Local + Sync Pending", "error");
-      }
-    }
-
-    async function initialize() {
-      loadSettings();
-      state.progress = loadLocalProgress();
-
-      try {
-        const response = await fetch(CONFIG.problemsUrl, { cache: "no-store" });
-        if (!response.ok) throw new Error(`Unable to load ${CONFIG.problemsUrl}`);
-        const data = await response.json();
-        state.problems = data.problems || [];
-        state.decks = data.decks || [];
-      } catch (err) {
-        document.body.innerHTML = `<div class="min-h-screen flex items-center justify-center p-6"><div class="max-w-md rounded-xl border border-red-900 bg-red-950/30 p-6"><h1 class="font-semibold text-red-300">Could not load problem catalog</h1><p class="mt-2 text-sm leading-6 text-zinc-400">${escapeHtml(err.message)}. Make sure problems.json is next to index.html.</p></div></div>`;
-        return;
-      }
-
-      if (!state.decks.length) {
-        state.decks = [{ id: "master-leetcode", name: "Master LeetCode", type: "static", problemIds: state.problems.map(p => p.id), dailyNewLimit: CONFIG.defaultNewPerDay }];
-      }
-
-      normalizeProgress();
-
-      const settings = getCloudSettings();
-      if (settings.githubToken && settings.gistId) {
-        syncInBackground();
-      } else {
-        setSyncBadge("Local Mode", "local");
-      }
-
-      renderDashboard();
-    }
-
-    $("startReviewBtn").addEventListener("click", () => startReview());
-    $("exitReviewBtn").addEventListener("click", exitReview);
-    $("settingsBtn").addEventListener("click", openSettings);
-    $("closeSettingsBtn").addEventListener("click", closeSettings);
-    $("testSyncBtn").addEventListener("click", testAndSync);
-    $("clearCloudBtn").addEventListener("click", () => {
-      localStorage.removeItem(CONFIG.settingsKey);
-      $("githubToken").value = "";
-      $("gistId").value = "";
-      setSyncBadge("Local Mode", "local");
-      showSyncMessage("Cloud settings cleared. Your local SRS progress remains.", false);
-    });
-
-    $("searchInput").addEventListener("input", e => { state.filters.search = e.target.value; renderProblemGrid(); });
-    $("patternFilter").addEventListener("change", e => { state.filters.pattern = e.target.value; renderProblemGrid(); });
-    $("difficultyFilter").addEventListener("change", e => { state.filters.difficulty = e.target.value; renderProblemGrid(); });
-    $("dueOnly").addEventListener("change", e => { state.filters.dueOnly = e.target.checked; renderProblemGrid(); });
-
-    function showSyncMessage(message, error) {
-      $("syncMessage").classList.remove("hidden");
-      $("syncMessage").className = `rounded-lg border p-3 text-sm ${error ? "border-red-900 bg-red-950/20 text-red-300" : "border-emerald-900 bg-emerald-950/20 text-emerald-300"}`;
-      $("syncMessage").textContent = message;
-    }
-
-    document.addEventListener("keydown", e => {
-      const tag = document.activeElement?.tagName;
-      if (["INPUT", "TEXTAREA", "SELECT"].includes(tag)) return;
-      if ($("reviewView").classList.contains("hidden")) return;
-
-      if (e.code === "Space") {
-        e.preventDefault();
-        if (!state.revealed) revealAnswer();
-      } else if (state.revealed && ["1","2","3","4"].includes(e.key)) {
-        e.preventDefault();
-        rateCurrent({ "1":"again", "2":"hard", "3":"good", "4":"easy" }[e.key]);
-      } else if (e.key.toLowerCase() === "n") {
-        e.preventDefault();
-        if (state.reviewIndex + 1 < state.reviewQueue.length) {
-          state.reviewIndex++;
-          state.revealed = false;
-          renderReviewCard();
-        }
-      } else if (e.key === "Escape") {
-        exitReview();
-      }
-    });
-
-    lucide.createIcons();
-    initialize();
-  </script>
+</header>
+
+<main class="mx-auto max-w-7xl px-4 py-6">
+  <section id="homeView">
+    <div class="mb-7">
+      <div class="text-sm text-zinc-500">Free beta · no signup required</div>
+      <h1 class="mt-1 text-3xl font-semibold tracking-tight md:text-4xl">Prepare for your interview.</h1>
+      <p class="mt-3 max-w-2xl text-sm leading-6 text-zinc-500">Choose a company-specific curated deck, practice active recall, and let lightweight spaced repetition bring problems back when they need review.</p>
+    </div>
+    <div id="deckGrid" class="grid gap-4 md:grid-cols-3"></div>
+    <div class="mt-8 rounded-xl border border-zinc-800 bg-zinc-900/30 p-4 text-sm text-zinc-500">
+      <span class="text-zinc-300">Beta note:</span> progress is stored only in this browser. No account or cloud sync is required.
+    </div>
+  </section>
+
+  <section id="deckView" class="hidden">
+    <button id="backDecks" class="mb-5 inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-white"><i data-lucide="arrow-left" class="h-4 w-4"></i>All decks</button>
+    <div class="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+      <div><div id="deckCompany" class="text-sm text-zinc-500"></div><h1 id="deckTitle" class="mt-1 text-3xl font-semibold"></h1><p id="deckDescription" class="mt-2 max-w-2xl text-sm text-zinc-500"></p></div>
+      <button id="startBtn" class="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-black hover:bg-zinc-200"><i data-lucide="play" class="h-4 w-4"></i>Start Study</button>
+    </div>
+    <div id="stats" class="mb-6 grid grid-cols-2 gap-3 md:grid-cols-4"></div>
+    <div class="mb-5 rounded-xl border border-zinc-800 bg-zinc-900/30 p-4">
+      <div class="grid gap-3 md:grid-cols-[1fr_150px_150px_auto]">
+        <div class="relative"><i data-lucide="search" class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-600"></i><input id="search" class="w-full rounded-lg border border-zinc-800 bg-zinc-950 py-2.5 pl-9 pr-3 text-sm outline-none focus:border-zinc-600" placeholder="Search title or ID"></div>
+        <select id="difficulty" class="rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2.5 text-sm"><option value="">Difficulty</option><option>Easy</option><option>Medium</option><option>Hard</option></select>
+        <select id="status" class="rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2.5 text-sm"><option value="">Status</option><option value="new">New</option><option value="learning">Learning</option><option value="review">Review</option><option value="mastered">Mastered</option></select>
+        <label class="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-sm"><input id="dueOnly" type="checkbox" class="accent-white">Due</label>
+      </div>
+    </div>
+    <div class="mb-3 flex justify-between"><h2 class="font-semibold">Problems</h2><span id="count" class="text-xs text-zinc-500"></span></div>
+    <div id="problemGrid" class="grid gap-3 md:grid-cols-2 lg:grid-cols-3"></div>
+  </section>
+
+  <section id="reviewView" class="hidden">
+    <div class="mb-5 flex items-center justify-between">
+      <div><div id="reviewMeta" class="text-xs text-zinc-500"></div><h1 class="mt-1 text-xl font-semibold">Study Session</h1></div>
+      <button id="exitReview" class="rounded-lg border border-zinc-800 px-3 py-2 text-sm text-zinc-400 hover:bg-zinc-900">Exit</button>
+    </div>
+    <div id="reviewCard"></div>
+  </section>
+</main>
+
+<div id="settingsModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 p-4">
+ <div class="w-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-950">
+  <div class="flex items-center justify-between border-b border-zinc-800 px-5 py-4"><div><h2 class="font-semibold">Settings</h2><p class="text-xs text-zinc-500">Local beta settings</p></div><button id="closeSettings" class="p-2 text-zinc-500"><i data-lucide="x" class="h-4 w-4"></i></button></div>
+  <div class="space-y-4 p-5">
+   <div class="rounded-lg border border-zinc-800 bg-zinc-900/50 p-3 text-sm leading-6 text-zinc-400">Your SRS progress is stored in this browser using LocalStorage. Clearing site data will remove it. Cloud sync is intentionally not required for the beta.</div>
+   <button id="resetProgress" class="w-full rounded-lg border border-red-900/70 px-4 py-2.5 text-sm text-red-300 hover:bg-red-950/30">Reset all local progress</button>
+  </div>
+ </div>
+</div>
+
+<script>
+const KEY="interview-srs-progress-v2";
+const state={data:null,deck:null,progress:{},filters:{q:"",difficulty:"",status:"",due:false},queue:[],index:0,revealed:false};
+
+const $=id=>document.getElementById(id);
+const today=()=>new Date().toISOString().slice(0,10);
+const iso=()=>new Date().toISOString();
+const addDays=(d,n)=>{let x=new Date(d+"T00:00:00");x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const diffCls=d=>d==="Easy"?"border-emerald-800 bg-emerald-950/30 text-emerald-300":d==="Medium"?"border-amber-800 bg-amber-950/30 text-amber-300":"border-red-800 bg-red-950/30 text-red-300";
+
+function toast(msg,ok=true){const e=document.createElement("div");e.className=`rounded-lg border px-4 py-3 text-sm shadow-xl ${ok?"border-emerald-800 bg-emerald-950 text-emerald-200":"border-red-800 bg-red-950 text-red-200"}`;e.textContent=msg;$("toast").appendChild(e);setTimeout(()=>e.remove(),2800)}
+function save(){localStorage.setItem(KEY,JSON.stringify(state.progress))}
+function load(){try{state.progress=JSON.parse(localStorage.getItem(KEY)||"{}")}catch{state.progress={}}}
+function prog(id){if(!state.progress[id])state.progress[id]={problemId:id,status:"new",dueDate:today(),interval:0,ease:2.5,repetitions:0,lapses:0,updatedAt:iso()};return state.progress[id]}
+function due(p){let s=prog(p.id);return s.status==="new"||s.dueDate<=today()}
+function deckProblems(){return state.deck.problems.map(x=>state.data.problems.find(p=>p.id===x.problemId)).filter(Boolean)}
+function stats(){let a=deckProblems(),d=0,l=0,m=0,n=0;for(const p of a){let s=prog(p.id);if(s.status==="mastered")m++;else if(s.status==="new"){n++;if(due(p))d++}else if(s.status==="learning"){l++;if(due(p))d++}else if(due(p))d++}return{d,l,m,n,total:a.length}}
+function statusText(s){return s==="new"?"New":s==="learning"?"Learning":s==="mastered"?"Mastered":"Review"}
+
+function renderDecks(){
+ $("homeView").classList.remove("hidden");$("deckView").classList.add("hidden");$("reviewView").classList.add("hidden");
+ $("deckGrid").innerHTML=state.data.decks.map(d=>{
+   let st=statsForDeck(d);
+   return `<button data-deck="${esc(d.id)}" class="text-left rounded-2xl border border-zinc-800 bg-zinc-900/30 p-5 transition hover:border-zinc-700 hover:bg-zinc-900/70">
+    <div class="flex items-center justify-between"><span class="text-xs text-zinc-500">${esc(d.company)}</span><span class="rounded-full border border-zinc-800 px-2 py-0.5 text-[10px] text-zinc-500">${d.sourceCount} problems</span></div>
+    <h2 class="mt-3 text-xl font-semibold">${esc(d.name.replace(" — Top 100",""))}</h2>
+    <p class="mt-2 text-sm leading-6 text-zinc-500">${esc(d.description)}</p>
+    <div class="mt-5 grid grid-cols-3 gap-2 text-center"><div><div class="text-lg font-semibold">${st.due}</div><div class="text-[10px] text-zinc-600">Due</div></div><div><div class="text-lg font-semibold">${st.learning}</div><div class="text-[10px] text-zinc-600">Learning</div></div><div><div class="text-lg font-semibold">${st.mastered}</div><div class="text-[10px] text-zinc-600">Mastered</div></div></div>
+    <div class="mt-5 rounded-lg bg-white px-3 py-2 text-center text-sm font-semibold text-black">Study deck</div>
+   </button>`}).join("");
+ document.querySelectorAll("[data-deck]").forEach(b=>b.onclick=()=>selectDeck(b.dataset.deck));
+ lucide.createIcons();
+}
+function statsForDeck(d){let due=0,learning=0,mastered=0;for(const x of d.problems){let s=prog(x.problemId);if(s.status==="mastered")mastered++;else if(s.status==="learning")learning++;if(s.status!=="mastered"&&s.dueDate<=today())due++}return{due,learning,mastered}}
+function selectDeck(id){
+ state.deck=state.data.decks.find(d=>d.id===id);state.filters={q:"",difficulty:"",status:"",due:false};
+ $("homeView").classList.add("hidden");$("reviewView").classList.add("hidden");$("deckView").classList.remove("hidden");
+ $("deckCompany").textContent=state.deck.company+" Interview";
+ $("deckTitle").textContent=state.deck.name;
+ $("deckDescription").textContent=state.deck.description;
+ $("search").value="";$("difficulty").value="";$("status").value="";$("dueOnly").checked=false;
+ renderDeck();
+}
+function renderDeck(){
+ let s=stats(), arr=deckProblems().filter(p=>{
+  let q=state.filters.q.toLowerCase();let ps=prog(p.id);
+  if(q&&!(`${p.id} ${p.title}`.toLowerCase().includes(q)))return false;
+  if(state.filters.difficulty&&p.difficulty!==state.filters.difficulty)return false;
+  if(state.filters.status&&ps.status!==state.filters.status)return false;
+  if(state.filters.due&&!due(p))return false;return true;
+ });
+ $("stats").innerHTML=[["Due Today",s.d,"calendar-clock"],["Learning",s.l,"brain"],["New",s.n,"sparkles"],["Mastered",s.m,"badge-check"]].map(x=>`<div class="rounded-xl border border-zinc-800 bg-zinc-900/30 p-4"><div class="flex justify-between text-xs text-zinc-500"><span>${x[0]}</span><i data-lucide="${x[2]}" class="h-4 w-4"></i></div><div class="mt-2 text-2xl font-semibold">${x[1]}</div></div>`).join("");
+ $("count").textContent=`${arr.length} of ${stats().total}`;
+ $("problemGrid").innerHTML=arr.map(p=>{let ps=prog(p.id);return `<button data-problem="${p.id}" class="text-left rounded-xl border border-zinc-800 bg-zinc-900/30 p-4 hover:border-zinc-700 hover:bg-zinc-900/70">
+   <div class="flex items-start justify-between gap-3"><div><div class="text-xs text-zinc-500">#${p.id} · Rank #${state.deck.problems.find(x=>x.problemId===p.id)?.rank}</div><div class="mt-1 font-medium">${esc(p.title)}</div></div><span class="rounded-full border px-2 py-0.5 text-[10px] ${diffCls(p.difficulty)}">${p.difficulty}</span></div>
+   <div class="mt-3 flex flex-wrap gap-1.5"><span class="rounded-full border border-zinc-800 px-2 py-0.5 text-[10px] text-zinc-500">${esc(p.pattern)}</span><span class="rounded-full border border-zinc-800 px-2 py-0.5 text-[10px] ${due(p)?"text-amber-300":"text-zinc-500"}">${statusText(ps.status)}${due(p)?" · Due":""}</span></div>
+   <div class="mt-3 text-xs text-zinc-600">Acceptance ${p.acceptanceRate.toFixed(1)}%</div>
+ </button>`}).join("")||`<div class="col-span-full rounded-xl border border-dashed border-zinc-800 p-8 text-center text-sm text-zinc-500">No problems match the filters.</div>`;
+ document.querySelectorAll("[data-problem]").forEach(b=>b.onclick=()=>start([Number(b.dataset.problem)]));lucide.createIcons();
+}
+function start(ids=null){
+ let ps=deckProblems();let q=ids?ids.map(id=>state.data.problems.find(p=>p.id===id)).filter(Boolean):ps.filter(p=>due(p)).sort((a,b)=>{let sa=prog(a.id),sb=prog(b.id);if(sa.status==="new"&&sb.status!=="new")return 1;if(sb.status==="new"&&sa.status!=="new")return -1;return sa.dueDate.localeCompare(sb.dueDate)}).slice(0,20);
+ if(!q.length){toast("Nothing is due. Use the problem list to practice a specific problem.");return}
+ state.queue=q;state.index=0;state.revealed=false;$("deckView").classList.add("hidden");$("reviewView").classList.remove("hidden");renderCard();
+}
+function renderCard(){
+ let p=state.queue[state.index];if(!p)return finish();
+ let s=prog(p.id);$("reviewMeta").textContent=`${state.index+1} of ${state.queue.length} · ${state.deck.company} rank #${state.deck.problems.find(x=>x.problemId===p.id)?.rank} · ${statusText(s.status)}`;
+ let front=`<div class="card-in rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 md:p-8">
+  <div class="flex flex-wrap gap-2"><span class="text-xs text-zinc-500">#${p.id}</span><span class="rounded-full border px-2 py-0.5 text-[10px] ${diffCls(p.difficulty)}">${p.difficulty}</span><span class="rounded-full border border-zinc-800 px-2 py-0.5 text-[10px] text-zinc-500">${esc(p.pattern)}</span></div>
+  <h2 class="mt-4 text-2xl font-semibold md:text-3xl">${esc(p.title)}</h2>
+  <p class="mt-4 text-sm leading-7 text-zinc-400">Try to solve this problem from memory before revealing the answer. Pay attention to the pattern, invariant, edge cases, and complexity.</p>
+  <div class="mt-6 grid gap-4 sm:grid-cols-2"><div class="rounded-xl border border-zinc-800 bg-zinc-950 p-4"><div class="text-xs text-zinc-500">Company ranking</div><div class="mt-1 text-lg font-semibold">#${state.deck.problems.find(x=>x.problemId===p.id)?.rank}</div></div><div class="rounded-xl border border-zinc-800 bg-zinc-950 p-4"><div class="text-xs text-zinc-500">Acceptance rate</div><div class="mt-1 text-lg font-semibold">${p.acceptanceRate.toFixed(1)}%</div></div></div>
+  <div class="mt-6 rounded-xl border border-zinc-800 bg-zinc-950 p-4"><div class="text-xs text-zinc-500">My approach</div><textarea id="myApproach" rows="5" class="mt-2 w-full resize-none bg-transparent text-sm leading-6 outline-none placeholder:text-zinc-700" placeholder="Write your approach before revealing..."></textarea></div>
+  <div class="mt-6 flex flex-wrap justify-between gap-2"><a href="${esc(p.url)}" target="_blank" rel="noopener" class="rounded-lg border border-zinc-800 px-4 py-2.5 text-sm text-zinc-400 hover:text-white">Open on LeetCode ↗</a><button id="reveal" class="rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-black">Reveal Answer <span class="ml-2 text-zinc-500">Space</span></button></div>
+ </div>`;
+ let back;
+ if(p.contentStatus==="needs-enrichment"){
+  back=`<div class="card-in rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 md:p-8">
+   <div class="flex flex-wrap gap-2"><span class="text-xs text-zinc-500">#${p.id}</span><span class="rounded-full border px-2 py-0.5 text-[10px] ${diffCls(p.difficulty)}">${p.difficulty}</span></div>
+   <h2 class="mt-4 text-2xl font-semibold">${esc(p.title)}</h2>
+   <div class="mt-6 rounded-xl border border-amber-900/50 bg-amber-950/20 p-4 text-sm leading-6 text-amber-200">This problem is in the beta deck, but its learning blueprint has not been authored yet. Please use the LeetCode statement for the full prompt. We are intentionally not inventing an answer or code.</div>
+   <div class="mt-5 flex gap-2"><a href="${esc(p.url)}" target="_blank" rel="noopener" class="rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-black">Open on LeetCode ↗</a></div>
+   <div class="mt-8 grid grid-cols-4 gap-2">${ratings()}</div>
+  </div>`;
+ }else{
+  back=`<div class="card-in rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 md:p-8">
+   <div class="flex flex-wrap gap-2"><span class="text-xs text-zinc-500">#${p.id}</span><span class="rounded-full border px-2 py-0.5 text-[10px] ${diffCls(p.difficulty)}">${p.difficulty}</span><span class="rounded-full border border-zinc-800 px-2 py-0.5 text-[10px] text-zinc-500">${esc(p.pattern)}</span></div>
+   <h2 class="mt-4 text-2xl font-semibold">${esc(p.title)}</h2>
+   <div class="mt-6 grid gap-4 md:grid-cols-2"><div class="rounded-xl border border-zinc-800 bg-zinc-950 p-4"><div class="text-xs text-zinc-500 uppercase tracking-wider">Trigger</div><p class="mt-2 text-sm leading-6">${esc(p.trigger)}</p></div><div class="rounded-xl border border-zinc-800 bg-zinc-950 p-4"><div class="text-xs text-zinc-500 uppercase tracking-wider">Aha</div><p class="mt-2 text-sm leading-6">${esc(p.aha)}</p></div></div>
+   <div class="mt-4 rounded-xl border border-zinc-800 bg-zinc-950 p-4"><div class="text-xs text-zinc-500 uppercase tracking-wider">Approach</div><ol class="mt-3 space-y-2 text-sm text-zinc-300">${p.approach.map(x=>`<li>• ${esc(x)}</li>`).join("")}</ol></div>
+   <div class="mt-4 rounded-xl border border-zinc-800 bg-zinc-950 p-4"><div class="flex justify-between text-xs text-zinc-500"><span>Python</span><button id="copy" class="rounded border border-zinc-800 px-2 py-1">Copy</button></div><pre id="code" class="code mt-3 overflow-auto whitespace-pre-wrap text-xs leading-6 text-zinc-300">${esc(p.python)}</pre></div>
+   <div class="mt-4 flex gap-2"><span class="rounded-full border border-zinc-800 px-3 py-1 text-xs">Time ${esc(p.time)}</span><span class="rounded-full border border-zinc-800 px-3 py-1 text-xs">Space ${esc(p.space)}</span></div>
+   <div class="mt-7 grid grid-cols-4 gap-2">${ratings()}</div>
+  </div>`;
+ }
+ $("reviewCard").innerHTML=state.revealed?back:front;
+ if(!state.revealed){$("reveal").onclick=()=>{state.revealed=true;renderCard()}}else{
+  document.querySelectorAll("[data-rate]").forEach(b=>b.onclick=()=>rate(b.dataset.rate));
+  if($("copy"))$("copy").onclick=async()=>{await navigator.clipboard.writeText(p.python);toast("Code copied")}
+ }
+ lucide.createIcons();
+}
+function ratings(){return [["again","Again","1 day","border-red-900/70"],["hard","Hard","3 days","border-amber-900/70"],["good","Good","7 days","border-emerald-900/70"],["easy","Easy","14 days","border-sky-900/70"]].map(x=>`<button data-rate="${x[0]}" class="rounded-xl border ${x[3]} px-2 py-3 hover:bg-zinc-900"><div class="text-sm font-semibold">${x[1]}</div><div class="mt-1 text-[10px] text-zinc-600">${x[2]}</div></button>`).join("")}
+function rate(r){
+ let p=state.queue[state.index],s=prog(p.id),interval=s.interval||0;
+ if(r==="again"){s.status="learning";s.interval=1;s.lapses++}
+ if(r==="hard"){s.status="review";s.interval=Math.max(3,Math.round((interval||1)*1.2))}
+ if(r==="good"){s.status="review";s.interval=interval?Math.max(7,Math.round(interval*2.5)):7}
+ if(r==="easy"){s.status="review";s.interval=interval?Math.max(14,Math.round(interval*3.5)):14}
+ s.repetitions++;s.lastRating=r;s.dueDate=addDays(today(),s.interval);s.updatedAt=iso();
+ if(s.repetitions>=3&&s.interval>=30&&r!=="again")s.status="mastered";
+ save();state.index++;state.revealed=false;renderCard();
+}
+function finish(){$("reviewMeta").textContent=`${state.queue.length} reviewed`;$("reviewCard").innerHTML=`<div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-10 text-center"><div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-emerald-800 bg-emerald-950/40 text-emerald-300"><i data-lucide="check"></i></div><h2 class="mt-5 text-2xl font-semibold">Session complete</h2><p class="mt-2 text-sm text-zinc-500">Your progress is saved locally on this device.</p><button id="done" class="mt-6 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-black">Back to deck</button></div>`;lucide.createIcons();$("done").onclick=()=>selectDeck(state.deck.id)}
+$("homeBtn").onclick=renderDecks;$("backDecks").onclick=renderDecks;$("startBtn").onclick=()=>start();$("exitReview").onclick=()=>selectDeck(state.deck.id);
+$("search").oninput=e=>{state.filters.q=e.target.value;renderDeck()};$("difficulty").onchange=e=>{state.filters.difficulty=e.target.value;renderDeck()};$("status").onchange=e=>{state.filters.status=e.target.value;renderDeck()};$("dueOnly").onchange=e=>{state.filters.due=e.target.checked;renderDeck()};
+$("settingsBtn").onclick=()=>{$("settingsModal").classList.remove("hidden");$("settingsModal").classList.add("flex")};$("closeSettings").onclick=()=>{$("settingsModal").classList.add("hidden");$("settingsModal").classList.remove("flex")};
+$("resetProgress").onclick=()=>{if(confirm("Reset all local SRS progress?")){state.progress={};save();toast("Progress reset");$("settingsModal").classList.add("hidden");$("settingsModal").classList.remove("flex");if(state.deck)renderDeck()}};
+document.addEventListener("keydown",e=>{if($("reviewView").classList.contains("hidden"))return;if(["INPUT","TEXTAREA","SELECT"].includes(document.activeElement.tagName))return;if(e.code==="Space"){e.preventDefault();if(!state.revealed){state.revealed=true;renderCard()}}if(state.revealed&&["1","2","3","4"].includes(e.key))rate(["again","hard","good","easy"][Number(e.key)-1]);if(e.key==="Escape")selectDeck(state.deck.id)});
+async function init(){load();let r=await fetch("./problems.json",{cache:"no-store"});state.data=await r.json();renderDecks();lucide.createIcons()}
+init();
+</script>
 </body>
 </html>
