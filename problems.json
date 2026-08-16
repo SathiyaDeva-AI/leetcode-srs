@@ -1,0 +1,249 @@
+{
+  "version": 1,
+  "decks": [
+    {
+      "id": "master-leetcode",
+      "name": "Master LeetCode",
+      "description": "Initial sample deck for the LeetCode SRS prototype.",
+      "type": "roadmap",
+      "version": 1,
+      "problemIds": [
+        1,
+        20,
+        121,
+        242,
+        3
+      ],
+      "dailyNewLimit": 2
+    },
+    {
+      "id": "two-pointers",
+      "name": "Two Pointers",
+      "description": "Dynamic sample deck based on problem pattern.",
+      "type": "dynamic",
+      "filter": {
+        "pattern": "Two Pointers"
+      }
+    }
+  ],
+  "problems": [
+    {
+      "id": 1,
+      "title": "Two Sum",
+      "difficulty": "Easy",
+      "pattern": "Hash Map",
+      "patternFamily": "Arrays",
+      "url": "https://leetcode.com/problems/two-sum/",
+      "description": "Given an array of integers and a target value, find the two distinct positions whose values add up to the target. Return their indices.",
+      "examples": [
+        {
+          "input": "nums = [2,7,11,15], target = 9",
+          "output": "[0,1]"
+        }
+      ],
+      "constraints": [
+        "Assume exactly one valid pair exists.",
+        "The same array element cannot be used twice."
+      ],
+      "trigger": "Need to find a complementary value while scanning the array once.",
+      "aha": "Instead of searching for the partner after seeing a number, store previously seen values so the complement lookup is O(1) average.",
+      "approach": [
+        "Create a hash map from value to its index.",
+        "Scan the array from left to right.",
+        "For each value x, compute target - x.",
+        "If the complement is already in the map, return its index and the current index.",
+        "Otherwise store x and continue."
+      ],
+      "solutions": {
+        "python": "def twoSum(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, x in enumerate(nums):\n        need = target - x\n        if need in seen:\n            return [seen[need], i]\n        seen[x] = i\n    return []"
+      },
+      "timeComplexity": "O(N)",
+      "spaceComplexity": "O(N)",
+      "commonMistakes": [
+        "Checking the map after inserting the current value.",
+        "Using nested loops when a hash map gives linear expected time."
+      ],
+      "followUps": [
+        "What changes if the array is sorted?",
+        "How would you handle multiple valid pairs?"
+      ],
+      "staffInsights": [
+        "The hash map trades memory for latency. In a distributed setting, partitioning by value would be difficult because the complementary lookup needs shared state."
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Valid Parentheses",
+      "difficulty": "Easy",
+      "pattern": "Stack",
+      "patternFamily": "Stacks",
+      "url": "https://leetcode.com/problems/valid-parentheses/",
+      "description": "Determine whether a string containing bracket characters is correctly nested and every closing bracket matches the most recent unmatched opener.",
+      "examples": [
+        {
+          "input": "s = \"({[]})\"",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Input contains only bracket characters for this exercise."
+      ],
+      "trigger": "The most recent unmatched opening bracket must be matched first.",
+      "aha": "Nested matching is last-in-first-out, which is exactly the behavior of a stack.",
+      "approach": [
+        "Create a stack for opening brackets.",
+        "Map each closing bracket to its matching opener.",
+        "Push opening brackets.",
+        "For a closing bracket, verify that the stack top is the expected opener.",
+        "Return true only when the stack is empty at the end."
+      ],
+      "solutions": {
+        "python": "def isValid(s: str) -> bool:\n    stack = []\n    pairs = {')': '(', ']': '[', '}': '{'}\n    for ch in s:\n        if ch in pairs:\n            if not stack or stack.pop() != pairs[ch]:\n                return False\n        else:\n            stack.append(ch)\n    return not stack"
+      },
+      "timeComplexity": "O(N)",
+      "spaceComplexity": "O(N)",
+      "commonMistakes": [
+        "Forgetting to check an empty stack before pop.",
+        "Returning true without verifying that all openers were closed."
+      ],
+      "followUps": [
+        "How would you support wildcard brackets?",
+        "Can you validate a streaming input?"
+      ],
+      "staffInsights": [
+        "A streaming validator can process arbitrarily large input without storing the full string; only unmatched openers need to remain in memory."
+      ]
+    },
+    {
+      "id": 121,
+      "title": "Best Time to Buy and Sell Stock",
+      "difficulty": "Easy",
+      "pattern": "One-Pass Scan",
+      "patternFamily": "Arrays",
+      "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+      "description": "Given daily prices, choose one day to buy and a later day to sell to maximize the resulting profit.",
+      "examples": [
+        {
+          "input": "prices = [7,1,5,3,6,4]",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Only one buy and one sell are allowed.",
+        "The sell must occur after the buy."
+      ],
+      "trigger": "At each price, the best previous buy is simply the minimum price seen so far.",
+      "aha": "You do not need to remember every candidate buy day; keep only the minimum price and the best profit so far.",
+      "approach": [
+        "Initialize the minimum price to infinity and best profit to zero.",
+        "Scan prices from left to right.",
+        "Update the minimum price.",
+        "Compute today's profit using the minimum prior price.",
+        "Keep the maximum profit."
+      ],
+      "solutions": {
+        "python": "def maxProfit(prices: list[int]) -> int:\n    min_price = float('inf')\n    best = 0\n    for price in prices:\n        min_price = min(min_price, price)\n        best = max(best, price - min_price)\n    return best"
+      },
+      "timeComplexity": "O(N)",
+      "spaceComplexity": "O(1)",
+      "commonMistakes": [
+        "Allowing the buy day to occur after the sell day.",
+        "Tracking all prior prices unnecessarily."
+      ],
+      "followUps": [
+        "What changes if multiple transactions are allowed?",
+        "What if a transaction fee is charged?"
+      ],
+      "staffInsights": [
+        "The one-pass invariant is simple and robust. In a streaming analytics system, the same state can be maintained without retaining the full price history."
+      ]
+    },
+    {
+      "id": 242,
+      "title": "Valid Anagram",
+      "difficulty": "Easy",
+      "pattern": "Frequency Map",
+      "patternFamily": "Hashing",
+      "url": "https://leetcode.com/problems/valid-anagram/",
+      "description": "Determine whether two strings contain exactly the same characters with the same frequencies.",
+      "examples": [
+        {
+          "input": "s = \"anagram\", t = \"nagaram\"",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Character ordering does not matter."
+      ],
+      "trigger": "Same multiset of characters means equal frequency for every character.",
+      "aha": "Count occurrences rather than comparing positions.",
+      "approach": [
+        "If lengths differ, return false.",
+        "Build a frequency map from the first string.",
+        "Subtract counts using the second string.",
+        "Reject if a character is missing or over-consumed.",
+        "Return true when all counts balance."
+      ],
+      "solutions": {
+        "python": "from collections import Counter\n\ndef isAnagram(s: str, t: str) -> bool:\n    return Counter(s) == Counter(t)"
+      },
+      "timeComplexity": "O(N)",
+      "spaceComplexity": "O(K)",
+      "commonMistakes": [
+        "Sorting both strings when linear counting is sufficient.",
+        "Ignoring length mismatch."
+      ],
+      "followUps": [
+        "How would you solve it with a fixed alphabet?",
+        "How would you process very large strings in chunks?"
+      ],
+      "staffInsights": [
+        "For a bounded alphabet, the frequency structure is effectively constant-sized. For large Unicode domains, memory depends on the number of distinct symbols."
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Longest Substring Without Repeating Characters",
+      "difficulty": "Medium",
+      "pattern": "Sliding Window",
+      "patternFamily": "Two Pointers",
+      "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+      "description": "Find the maximum length of a contiguous substring in which every character appears at most once.",
+      "examples": [
+        {
+          "input": "s = \"abcabcbb\"",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "The answer must be a contiguous substring."
+      ],
+      "trigger": "Need the longest contiguous region satisfying a uniqueness constraint.",
+      "aha": "Maintain a window that is always valid; when a duplicate appears, move the left boundary past the previous occurrence.",
+      "approach": [
+        "Maintain a left boundary and a map from character to its latest index.",
+        "Scan the right boundary across the string.",
+        "When a duplicate appears inside the current window, move left forward.",
+        "Update the latest index for the current character.",
+        "Track the maximum window length."
+      ],
+      "solutions": {
+        "python": "def lengthOfLongestSubstring(s: str) -> int:\n    last = {}\n    left = 0\n    best = 0\n    for right, ch in enumerate(s):\n        if ch in last and last[ch] >= left:\n            left = last[ch] + 1\n        last[ch] = right\n        best = max(best, right - left + 1)\n    return best"
+      },
+      "timeComplexity": "O(N)",
+      "spaceComplexity": "O(K)",
+      "commonMistakes": [
+        "Moving the left pointer backward.",
+        "Resetting the whole window when a duplicate appears.",
+        "Confusing substring with subsequence."
+      ],
+      "followUps": [
+        "How would you return the actual substring?",
+        "How would the problem change if up to K duplicates were allowed?"
+      ],
+      "staffInsights": [
+        "The key invariant is that the active window remains valid. This pattern generalizes well to streaming systems where only a bounded active state is required."
+      ]
+    }
+  ]
+}
